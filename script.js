@@ -512,54 +512,54 @@ Date: ${new Date().toLocaleDateString('en-US', { dateStyle: 'full' })}`;
   const projectDetails = {
     evento: {
       title: 'Evento — Event Management Web App',
-      badge: 'Full-Stack Web App',
+      badge: 'Project Based Learning • Web App',
       badgeColor: 'border-[#FFCA06]/50 text-[#FFCA06] bg-[#3F194D]/90 shadow-[0_0_12px_rgba(255,202,6,0.35)]',
-      stack: ['React', 'Laravel', 'MySQL', 'REST API', 'Tailwind CSS', 'JWT Auth'],
-      role: 'Lead System Analyst & Full-Stack Developer',
-      period: 'Academic Milestone Project',
-      problem: 'Handling multi-session event ticketing, attendee check-ins, and schedule coordination manually creates operational bottlenecks and error-prone tracking.',
-      solution: 'Engineered a full-featured web app with role-based dashboards (Admin, Organizer, Attendee), QR-code verification readiness, and normalized relational database tracking.',
+      stack: ['React', 'Laravel', 'MySQL', 'REST API', 'Payment Verification'],
+      role: 'Backend & Database Developer',
+      period: '2026 – present • Malang, East Java',
+      problem: 'Handling multi-session event ticketing, manual payment verifications, and participant upload proofs manually creates operational bottlenecks and error-prone tracking.',
+      solution: 'Developed a robust web platform focused on manual payment verification for event transactions. Engineered the backend using Laravel to track payment statuses in real-time and implemented a secure file upload pipeline for participant receipts.',
       features: [
-        'Real-time event discovery with category and date filtering',
-        'Normalized 3NF relational database schema in MySQL for high data integrity',
-        'Secure token-authenticated API endpoints between React frontend and Laravel backend',
-        'Organizer dashboard with attendee metrics, capacity counters, and download reports'
+        'Manual payment verification engine for secure event transactions',
+        'Laravel backend logic tracking participant payment status workflow',
+        'Secure file upload system for payment proof submissions',
+        'Normalized MySQL database design and seamless React UI integration'
       ],
-      githubUrl: 'https://github.com'
+      githubUrl: 'https://github.com/PraNAtaP/evento-webapp'
     },
     reworth: {
-      title: 'ReWorth — Digital Waste Bank System',
-      badge: 'Mobile & Sustainability',
+      title: 'ReWorth — Waste Bank System',
+      badge: 'Project Based Learning • Mobile & Web',
       badgeColor: 'border-[#C91C7A]/50 text-[#C91C7A] bg-[#3F194D]/90 shadow-[0_0_12px_rgba(201,28,122,0.35)]',
-      stack: ['Flutter', 'PHP', 'MySQL', 'Mobile UI/UX', 'Financial Ledger'],
-      role: 'System Analyst & Mobile Application Developer',
-      period: 'Sustainability & Civic Tech Project',
+      stack: ['Dart (Flutter)', 'PHP (Web)', 'MySQL', 'Waste Management ERP'],
+      role: 'Database Architect & Backend Developer',
+      period: '2026 • Malang, East Java',
       problem: 'Community waste banks face low public engagement and trust deficit due to opaque manual ledgers, inconsistent pricing, and cumbersome physical passbooks.',
-      solution: 'ReWorth modernizes community recycling by digitizing the deposit-to-credit workflow. Residents turn segregated inorganic waste into transparent point balances and digital cash equivalents.',
+      solution: 'Developed an integrated waste management system consisting of a public website, a mobile app, and a specialized portal for waste sellers. Designed the relational database architecture and implemented the backend logic using PHP.',
       features: [
-        'Automated weight-to-currency formula based on real-time commodity scrap rates',
-        'Digital passbook balance tracking with detailed transactional history',
-        'Mobile client built with Flutter for intuitive accessibility across age groups',
-        'Admin backend in PHP/MySQL managing physical warehouse stock and disbursement logs'
+        'Multi-platform system: Main website, mobile application, and waste seller portal',
+        'Normalized relational database structure in MySQL managing user transactions',
+        'Automated backend ledger in PHP converting waste weights into verified digital records',
+        'Intuitive mobile client built with Flutter (Dart) for community users'
       ],
-      githubUrl: 'https://github.com'
+      githubUrl: 'https://github.com/jsofiah/ReWorth'
     },
     datalab: {
       title: 'Data Technology Laboratory Information System',
-      badge: 'Academic Inventory System',
+      badge: 'Project Based Learning • Academic IS',
       badgeColor: 'border-[#FFCA06]/50 text-[#FFA726] bg-[#3F194D]/90 shadow-[0_0_12px_rgba(255,202,6,0.35)]',
-      stack: ['PHP Native', 'MySQL', 'JavaScript', 'Bootstrap', 'Role-Based Access'],
-      role: 'Systems Analyst & Lead Backend Developer',
-      period: 'Departmental Lab Management System',
-      problem: 'Lab equipment loans, computing station reservations, and maintenance incident tracking were previously recorded on paper ledgers, causing scheduling conflicts and untracked missing hardware.',
-      solution: 'Architected an integrated web-based laboratory information system streamlining equipment inventory audits, reservation queues, and scheduled maintenance workflows.',
+      stack: ['PHP Native', 'MySQL (Stored Procedures & Views)', 'Laboratory ERP'],
+      role: 'Backend Developer & Database Optimizer',
+      period: '2025 • Malang, East Java',
+      problem: 'Laboratory equipment cataloging, member details, research publications, and facility bookings required a centralized, secure departmental platform.',
+      solution: 'Built a web-based system to manage laboratory data at the Data Technology Laboratory (State Polytechnic of Malang), including member details, facilities, publications, and gallery. Optimized MySQL with Stored Procedures and Views for rapid retrieval.',
       features: [
-        'Role-Based Access Control (RBAC) separating Lab Administrator, Lab Technician, and Student',
-        'Automated schedule conflict detector preventing double-booked lab slots',
-        'Hardware audit trails logging check-out condition, return inspection, and incident flags',
-        'Comprehensive monthly PDF/Excel operational reporting for department faculty'
+        'Centralized laboratory data: member records, facility inventory, research publications, and gallery',
+        'Backend engineered using PHP Native with strict MVC separation',
+        'Optimized MySQL relational database using Stored Procedures and SQL Views',
+        'Fast and secure data querying tailored for department faculty and students'
       ],
-      githubUrl: 'https://github.com'
+      githubUrl: 'https://github.com/pembunuhGila/PBL'
     }
   };
 
