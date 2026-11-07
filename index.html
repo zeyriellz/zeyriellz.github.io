@@ -1681,9 +1681,57 @@
             </p>
 
             <!-- Direct Channels List -->
-            <div class="space-y-4 pt-2">
+            <div class="space-y-3.5 pt-2">
               
-              <!-- Email Card -->
+              <!-- 1. FEATURED OFFICIAL CV / RESUME CARD & DOWNLOAD BUTTON -->
+              <div class="glass-card rounded-2xl p-4.5 border-[#FFCA06]/50 bg-gradient-to-r from-[#3F194D]/90 via-[#260F43]/90 to-[#3F194D]/90 shadow-[0_0_25px_rgba(255,202,6,0.18)] hover:border-[#FFCA06] transition-all group">
+                <div class="card-spotlight"></div>
+                <div class="flex items-center justify-between gap-3">
+                  <div class="flex items-center gap-3.5">
+                    <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-[#C91C7A] to-[#FFCA06] p-[1.5px] shadow-[0_0_15px_rgba(255,202,6,0.35)] flex-shrink-0">
+                      <div class="w-full h-full bg-[#1A0B2E] rounded-[9px] flex items-center justify-center text-[#FFCA06]">
+                        <i class="fa-solid fa-file-pdf text-xl"></i>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="flex items-center gap-2">
+                        <span class="text-[11px] font-mono text-[#FFCA06] uppercase font-bold tracking-wider">Official Document</span>
+                        <span class="text-[9px] font-mono px-2 py-0.5 rounded-full bg-[#FFCA06]/15 text-[#FFCA06] border border-[#FFCA06]/30">nesslty.my.id/cv</span>
+                      </div>
+                      <h4 class="text-sm font-bold text-white group-hover:text-[#FFCA06] transition-colors leading-tight mt-0.5">
+                        Curriculum Vitae (CV)
+                      </h4>
+                    </div>
+                  </div>
+                  
+                  <!-- Direct CV Action Button -->
+                  <a href="/cv" target="_blank" rel="noopener noreferrer"
+                     class="btn-connect-neon px-4 py-2.5 rounded-xl text-xs font-bold font-mono tracking-wide flex items-center gap-2 flex-shrink-0 shadow-[0_0_15px_rgba(255,202,6,0.3)] hover:scale-105 transition-transform"
+                     title="View & Download PDF Resume">
+                    <i class="fa-solid fa-arrow-down text-xs"></i>
+                    <span>Get CV</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- 2. WhatsApp Direct Card -->
+              <a href="https://wa.me/6285733470557" target="_blank" rel="noopener noreferrer" class="glass-card rounded-2xl p-4 flex items-center justify-between group block hover:border-emerald-400 transition-all">
+                <div class="card-spotlight"></div>
+                <div class="flex items-center gap-3.5">
+                  <div class="icon-glow-box w-11 h-11 rounded-xl bg-emerald-500/15 text-emerald-400 flex items-center justify-center border border-emerald-500/40 shadow-[0_0_12px_rgba(52,211,153,0.3)]">
+                    <i class="fa-brands fa-whatsapp text-xl"></i>
+                  </div>
+                  <div>
+                    <span class="text-[11px] font-mono text-emerald-400 uppercase font-semibold">Direct WhatsApp</span>
+                    <div class="text-sm font-bold text-white group-hover:text-emerald-300 transition-colors">
+                      +62 857-3347-0557
+                    </div>
+                  </div>
+                </div>
+                <i class="fa-solid fa-arrow-up-right-from-square text-xs text-slate-400 group-hover:text-emerald-400 transition-colors"></i>
+              </a>
+
+              <!-- 3. Email Card -->
               <div class="glass-card rounded-2xl p-4 flex items-center justify-between group">
                 <div class="card-spotlight"></div>
                 <div class="flex items-center gap-3.5">
@@ -1702,8 +1750,8 @@
                 </button>
               </div>
 
-              <!-- LinkedIn Link -->
-              <a href="https://linkedin.com/in/nety-sulistyorini" target="_blank" rel="noopener noreferrer" class="glass-card rounded-2xl p-4 flex items-center justify-between group block">
+              <!-- 4. LinkedIn Link -->
+              <a href="https://linkedin.com/in/nety-sulistyorini" target="_blank" rel="noopener noreferrer" class="glass-card rounded-2xl p-4 flex items-center justify-between group block hover:border-blue-400/60 transition-all">
                 <div class="card-spotlight"></div>
                 <div class="flex items-center gap-3.5">
                   <div class="icon-glow-box w-11 h-11 rounded-xl bg-[#68097E]/30 text-[#FFCA06] flex items-center justify-center border border-[#FFCA06]/40">
@@ -1719,8 +1767,8 @@
                 <i class="fa-solid fa-arrow-up-right-from-square text-xs text-slate-400 group-hover:text-white transition-colors"></i>
               </a>
 
-              <!-- GitHub Link -->
-              <a href="https://github.com/zeyriellz" target="_blank" rel="noopener noreferrer" class="glass-card glass-card-purple rounded-2xl p-4 flex items-center justify-between group block">
+              <!-- 5. GitHub Link -->
+              <a href="https://github.com/zeyriellz" target="_blank" rel="noopener noreferrer" class="glass-card glass-card-purple rounded-2xl p-4 flex items-center justify-between group block hover:border-[#C91C7A]/60 transition-all">
                 <div class="card-spotlight"></div>
                 <div class="flex items-center gap-3.5">
                   <div class="icon-glow-box w-11 h-11 rounded-xl bg-purple-500/15 text-[#D8B4E2] flex items-center justify-center border border-purple-400/30">
@@ -1729,11 +1777,28 @@
                   <div>
                     <span class="text-[11px] font-mono text-slate-400 uppercase font-semibold">Code Repositories</span>
                     <div class="text-sm font-bold text-white group-hover:text-[#D8B4E2] transition-colors">
-                      Explore GitHub Profile
+                      github.com/zeyriellz
                     </div>
                   </div>
                 </div>
                 <i class="fa-solid fa-arrow-up-right-from-square text-xs text-slate-400 group-hover:text-white transition-colors"></i>
+              </a>
+
+              <!-- 6. Instagram Link -->
+              <a href="https://www.instagram.com/zeyriellz?cplk=MWdveHo4ZGVxdzdpNw==" target="_blank" rel="noopener noreferrer" class="glass-card rounded-2xl p-4 flex items-center justify-between group block hover:border-[#FFA726]/60 transition-all">
+                <div class="card-spotlight"></div>
+                <div class="flex items-center gap-3.5">
+                  <div class="icon-glow-box w-11 h-11 rounded-xl bg-gradient-to-tr from-[#C91C7A]/25 to-[#FFA726]/20 text-[#FFA726] flex items-center justify-center border border-[#FFA726]/40 shadow-[0_0_12px_rgba(255,167,38,0.3)]">
+                    <i class="fa-brands fa-instagram text-xl"></i>
+                  </div>
+                  <div>
+                    <span class="text-[11px] font-mono text-slate-400 uppercase font-semibold">Social Channel</span>
+                    <div class="text-sm font-bold text-white group-hover:text-[#FFA726] transition-colors">
+                      instagram.com/zeyriellz
+                    </div>
+                  </div>
+                </div>
+                <i class="fa-solid fa-arrow-up-right-from-square text-xs text-slate-400 group-hover:text-[#FFA726] transition-colors"></i>
               </a>
 
             </div>
