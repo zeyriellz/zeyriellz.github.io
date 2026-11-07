@@ -1,0 +1,2043 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nety Sulistyorini | Information Systems & Business Analyst Portfolio</title>
+  <meta name="description" content="Portfolio of Nety Sulistyorini - Information Systems Business Student at State Polytechnic of Malang. Aspiring Business & System Analyst bridging business needs with IT solutions.">
+  <meta name="keywords" content="Nety Sulistyorini, Business Analyst, System Analyst, Information Systems, IT Audit, COBIT 2019, Polinema, Portfolio">
+  <meta name="author" content="Nety Sulistyorini">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Nety Sulistyorini | Aspiring Business & System Analyst">
+  <meta property="og:description" content="Bridging business requirements with scalable IT solutions through data analysis and systematic architecture.">
+
+  <!-- Favicon Icon (SVG Data URI) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%231A0B2E'/><text x='50%' y='56%' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='50' font-weight='900' fill='%23FFCA06'>NS</text></svg>">
+
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6.5.1 CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            brand: {
+              dark: '#1A0B2E',
+              surface: '#260F43',
+              card: '#3F194D',
+              cardBorder: 'rgba(255, 202, 6, 0.25)',
+              magenta: '#C91C7A',
+              neonYellow: '#FFCA06',
+              purple: '#68097E',
+              neonPurple: '#9D12B8',
+              subtext: '#D8B4E2',
+              gold: '#FFCA06'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- GSAP 3 & ScrollTrigger via CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- Custom High-End Effects Engine -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-brand-dark text-slate-100 font-sans antialiased selection:bg-[#C91C7A] selection:text-white min-h-screen relative overflow-x-hidden">
+
+  <!-- Interactive Dynamic Mouse Follower Glow Light -->
+  <div id="cursor-glow"></div>
+
+  <!-- Multi-Layered Neon Mesh Gradient Backgrounds with Parallax Layers -->
+  <div class="mesh-gradient-container">
+    <!-- Cybernetic Matrix Grid -->
+    <div class="bg-grid-cyber parallax-grid"></div>
+
+    <!-- Radiant Glowing Aurora Mesh Orbs in Corners & Center with Parallax Attributes -->
+    <div class="parallax-orb parallax-orb-1" data-speed="0.45">
+      <div class="mesh-orb mesh-orb-1"></div>
+    </div>
+    <div class="parallax-orb parallax-orb-2" data-speed="-0.35">
+      <div class="mesh-orb mesh-orb-2"></div>
+    </div>
+    <div class="parallax-orb parallax-orb-3" data-speed="0.5">
+      <div class="mesh-orb mesh-orb-3"></div>
+    </div>
+    <div class="parallax-orb parallax-orb-4" data-speed="-0.4">
+      <div class="mesh-orb mesh-orb-4"></div>
+    </div>
+    <div class="parallax-orb parallax-orb-center" data-speed="0.25">
+      <div class="mesh-orb mesh-orb-center"></div>
+    </div>
+  </div>
+
+  <!-- NAVIGATION BAR -->
+  <header class="fixed top-0 left-0 right-0 z-50" id="navbar">
+
+    <!-- MAIN NAVIGATION BAR -->
+    <!-- ░░ TIER 1: Main Navigation Bar ░░ -->
+    <div class="nav-main-bar transition-all duration-300">
+      <!-- Scroll Progress Indicator (neon gradient bar) -->
+      <div id="scroll-progress-bar"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-[60px]">
+
+          <!-- ── Brand Monogram + Identity Stack ── -->
+          <a href="#hero" class="group flex items-center gap-3 shrink-0" aria-label="Go to top">
+            <!-- Hexagonal logo badge -->
+            <div class="relative w-10 h-10 flex-shrink-0">
+              <div class="absolute inset-0 rounded-xl bg-gradient-to-tr from-[#C91C7A] via-[#68097E] to-[#FFCA06] opacity-100 blur-[2px] group-hover:blur-[6px] transition-all duration-300"></div>
+              <div class="relative w-10 h-10 rounded-xl bg-gradient-to-tr from-[#C91C7A] via-[#68097E] to-[#FFCA06] p-[1.5px] shadow-lg group-hover:scale-105 transition-transform duration-300">
+                <div class="w-full h-full bg-[#1A0B2E] rounded-[10px] flex items-center justify-center">
+                  <span class="font-mono font-black text-sm text-transparent bg-clip-text bg-gradient-to-r from-[#FFCA06] to-[#C91C7A]">NS</span>
+                </div>
+              </div>
+            </div>
+            <!-- Name + Role stack -->
+            <div class="hidden sm:flex flex-col leading-tight">
+              <span class="font-extrabold text-sm text-white group-hover:text-[#FFCA06] transition-colors duration-200 tracking-wide">Nety Sulistyorini</span>
+              <span class="text-[10px] font-mono text-[#D8B4E2]/80 tracking-wider">Business & System Analyst Candidate</span>
+            </div>
+          </a>
+
+          <!-- ── Desktop Navigation (Floating Glass Pill) ── -->
+          <nav class="hidden lg:flex items-center gap-0.5 px-2 py-1 rounded-full bg-white/[0.04] border border-white/10 backdrop-blur-xl shadow-xl" role="navigation" aria-label="Main Navigation">
+            <a href="#about"        class="nav-link px-3 py-1.5 text-[11px] font-semibold text-slate-400 hover:text-[#FFCA06] rounded-full transition-all duration-200 tracking-wide uppercase">About</a>
+            <a href="#skills"       class="nav-link px-3 py-1.5 text-[11px] font-semibold text-slate-400 hover:text-[#FFCA06] rounded-full transition-all duration-200 tracking-wide uppercase">Skills</a>
+            <a href="#projects"     class="nav-link px-3 py-1.5 text-[11px] font-semibold text-slate-400 hover:text-[#FFCA06] rounded-full transition-all duration-200 tracking-wide uppercase">Projects</a>
+            <a href="#education"    class="nav-link px-3 py-1.5 text-[11px] font-semibold text-slate-400 hover:text-[#FFCA06] rounded-full transition-all duration-200 tracking-wide uppercase">Education</a>
+            <a href="#experience"   class="nav-link px-3 py-1.5 text-[11px] font-semibold text-slate-400 hover:text-[#FFCA06] rounded-full transition-all duration-200 tracking-wide uppercase">Org</a>
+            <a href="#achievements" class="nav-link px-3 py-1.5 text-[11px] font-semibold text-slate-400 hover:text-[#FFCA06] rounded-full transition-all duration-200 tracking-wide uppercase">Awards</a>
+          </nav>
+
+          <!-- ── Right Side: Social Pills + CTA ── -->
+          <div class="hidden md:flex items-center gap-2">
+            <!-- LinkedIn -->
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+               class="nav-social-pill group w-8 h-8 rounded-lg flex items-center justify-center border border-white/10 bg-white/5 text-slate-400 hover:text-[#FFCA06] hover:border-[#FFCA06]/50 hover:bg-[#FFCA06]/10 transition-all duration-200"
+               title="LinkedIn — Nety Sulistyorini" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin text-xs"></i>
+            </a>
+            <!-- GitHub -->
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer"
+               class="nav-social-pill group w-8 h-8 rounded-lg flex items-center justify-center border border-white/10 bg-white/5 text-slate-400 hover:text-[#C91C7A] hover:border-[#C91C7A]/50 hover:bg-[#C91C7A]/10 transition-all duration-200"
+               title="GitHub — Nety Sulistyorini" aria-label="GitHub">
+              <i class="fa-brands fa-github text-xs"></i>
+            </a>
+            <!-- Divider -->
+            <div class="w-px h-5 bg-white/15 mx-1"></div>
+            <!-- CTA Hire Button -->
+            <a href="#contact"
+               class="btn-connect-neon px-4 py-2 rounded-lg font-bold text-[11px] tracking-widest uppercase flex items-center gap-1.5 cursor-pointer group">
+              <i class="fa-regular fa-paper-plane text-[10px] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-200"></i>
+              <span>Hire Me</span>
+            </a>
+          </div>
+
+          <!-- ── Mobile Hamburger ── -->
+          <button id="mobile-menu-btn"
+            class="lg:hidden flex items-center justify-center w-9 h-9 rounded-xl border border-white/15 bg-white/5 text-slate-300 hover:text-[#FFCA06] hover:border-[#FFCA06]/50 focus:outline-none transition-all"
+            aria-label="Toggle Navigation Menu">
+            <i class="fa-solid fa-bars text-sm" id="menu-icon-bars"></i>
+            <i class="fa-solid fa-xmark text-sm hidden" id="menu-icon-close"></i>
+          </button>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ░░ TIER 2: Mobile Full-Screen Drawer ░░ -->
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-white/10 bg-[#120A23]/98 backdrop-blur-2xl shadow-2xl">
+      
+      <!-- Identity card inside drawer -->
+      <div class="mx-4 mt-4 mb-3 p-3.5 rounded-2xl bg-gradient-to-r from-[#3F194D]/70 to-[#260F43]/80 border border-[#FFCA06]/25 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-[#C91C7A] to-[#FFCA06] flex items-center justify-center font-mono font-black text-xs text-[#1A0B2E] shadow-[0_0_10px_rgba(201,28,122,0.4)]">NS</div>
+          <div>
+            <p class="text-xs font-bold text-white">Nety Sulistyorini</p>
+            <p class="text-[10px] font-mono text-[#FFCA06]">Polinema D-IV SIB · GPA 3.76</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-1.5">
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="w-7 h-7 rounded-lg border border-white/10 bg-white/5 flex items-center justify-center text-slate-300 hover:text-[#FFCA06] text-xs" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="w-7 h-7 rounded-lg border border-white/10 bg-white/5 flex items-center justify-center text-slate-300 hover:text-[#C91C7A] text-xs" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        </div>
+      </div>
+
+      <!-- Mobile nav links -->
+      <nav class="px-4 pb-4 flex flex-col gap-1" role="navigation" aria-label="Mobile Navigation">
+        <a href="#about"        class="mobile-nav-link flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-300 hover:text-[#FFCA06] hover:bg-[#3F194D]/50 transition-all"><i class="fa-solid fa-user w-4 text-[#FFCA06] text-xs text-center"></i>About</a>
+        <a href="#skills"       class="mobile-nav-link flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-300 hover:text-[#FFCA06] hover:bg-[#3F194D]/50 transition-all"><i class="fa-solid fa-code w-4 text-[#FFCA06] text-xs text-center"></i>Skills</a>
+        <a href="#projects"     class="mobile-nav-link flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-300 hover:text-[#FFCA06] hover:bg-[#3F194D]/50 transition-all"><i class="fa-solid fa-layer-group w-4 text-[#FFCA06] text-xs text-center"></i>Projects</a>
+        <a href="#education"    class="mobile-nav-link flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-300 hover:text-[#FFCA06] hover:bg-[#3F194D]/50 transition-all"><i class="fa-solid fa-graduation-cap w-4 text-[#FFCA06] text-xs text-center"></i>Education</a>
+        <a href="#experience"   class="mobile-nav-link flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-300 hover:text-[#FFCA06] hover:bg-[#3F194D]/50 transition-all"><i class="fa-solid fa-people-roof w-4 text-[#FFCA06] text-xs text-center"></i>Leadership & Org</a>
+        <a href="#achievements" class="mobile-nav-link flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-300 hover:text-[#FFCA06] hover:bg-[#3F194D]/50 transition-all"><i class="fa-solid fa-award w-4 text-[#FFCA06] text-xs text-center"></i>Achievements</a>
+        <a href="#contact" class="btn-connect-neon mt-2 px-4 py-3 rounded-xl text-sm font-bold flex items-center justify-center gap-2">
+          <i class="fa-regular fa-paper-plane text-xs"></i><span>Get in Touch</span>
+        </a>
+      </nav>
+    </div>
+
+  </header>
+
+  <!-- MAIN CONTENT CONTAINER -->
+  <main class="relative z-10 pt-20 sm:pt-24">
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="relative min-h-[calc(100vh-6rem)] flex items-center justify-center py-16 lg:py-24 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+          
+          <!-- Hero Text Details (Cols 1-7) -->
+          <div class="lg:col-span-7 flex flex-col items-start space-y-6">
+            
+            <!-- Availability Badge with Radiant Neon Rim -->
+            <div class="hero-anim-badge inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full glow-badge-status">
+              <span class="flex h-2.5 w-2.5 relative">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#FFCA06] opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#FFCA06] shadow-[0_0_10px_#FFCA06]"></span>
+              </span>
+              <span class="text-xs font-mono font-semibold text-[#FFCA06] tracking-wide">
+                Open for Business & System Analyst Opportunities
+              </span>
+            </div>
+
+            <!-- Main Heading with Luminous Typography -->
+            <div class="space-y-3">
+              <p class="hero-anim-text font-mono text-sm tracking-widest uppercase text-[#C91C7A] flex items-center gap-2 font-semibold">
+                <span class="w-2 h-2 rounded-full bg-[#FFCA06] shadow-[0_0_8px_#FFCA06]"></span>
+                <span>Hello, I am</span>
+                <span class="h-[1px] w-12 bg-gradient-to-r from-[#C91C7A] to-transparent"></span>
+              </p>
+              
+              <!-- NAME WITH RADIANT TEXT GRADIENT AND GLOW SHADOW -->
+              <h1 class="hero-anim-text text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-none">
+                <span class="hero-name-gradient">Nety Sulistyorini</span>
+              </h1>
+
+              <h2 class="hero-anim-text text-lg sm:text-2xl font-bold text-slate-200 flex flex-wrap items-center gap-2 pt-2">
+                <span class="text-slate-100">Information Systems Business Student</span>
+                <span class="hidden sm:inline text-[#FFCA06]">|</span>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#FFCA06] via-[#FFA726] to-[#C91C7A] drop-shadow-[0_0_15px_rgba(201,28,122,0.4)]">
+                  Aspiring Business & System Analyst
+                </span>
+              </h2>
+            </div>
+
+            <!-- Short Bio with Rich Contrast -->
+            <p class="hero-anim-text text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl font-normal">
+              A <strong class="text-white font-semibold">5th-semester student</strong> at <strong class="text-white font-semibold">State Polytechnic of Malang</strong>, majoring in Information Technology with a study program in Applied Bachelor D-IV of Information Systems Business. Passionate about bridging business needs with IT solutions through data analysis and system design.
+            </p>
+
+            <!-- Quick Metrics / Key Strengths Glass Cards -->
+            <div class="grid grid-cols-3 gap-3 sm:gap-4 w-full max-w-lg py-2">
+              <div class="hero-anim-metric glass-card stat-card-shine rounded-2xl p-3.5 sm:p-4 text-center">
+                <div class="card-spotlight"></div>
+                <div class="text-2xl sm:text-3xl font-extrabold font-mono text-transparent bg-clip-text bg-gradient-to-r from-[#FFCA06] to-[#FFA726] drop-shadow-[0_0_12px_rgba(255,202,6,0.6)]">
+                  3.76
+                </div>
+                <div class="text-xs text-brand-subtext font-semibold mt-1">Cumulative GPA</div>
+              </div>
+
+              <div class="hero-anim-metric glass-card glass-card-purple stat-card-shine rounded-2xl p-3.5 sm:p-4 text-center">
+                <div class="card-spotlight"></div>
+                <div class="text-2xl sm:text-3xl font-extrabold font-mono text-transparent bg-clip-text bg-gradient-to-r from-[#C91C7A] to-[#FFCA06] drop-shadow-[0_0_12px_rgba(201,28,122,0.6)]">
+                  3+
+                </div>
+                <div class="text-xs text-brand-subtext font-semibold mt-1">Core Projects</div>
+              </div>
+
+              <div class="hero-anim-metric glass-card stat-card-shine rounded-2xl p-3.5 sm:p-4 text-center">
+                <div class="card-spotlight"></div>
+                <div class="text-2xl sm:text-3xl font-extrabold font-mono text-[#FFA726] drop-shadow-[0_0_12px_rgba(255,167,38,0.6)]">
+                  COBIT '19
+                </div>
+                <div class="text-xs text-brand-subtext font-semibold mt-1">IT Audit Focus</div>
+              </div>
+            </div>
+
+            <!-- Action Buttons with Vibrant Lighting -->
+            <div class="flex flex-wrap items-center gap-4 pt-2">
+              <a href="#projects" class="hero-anim-cta btn-connect-neon px-7 py-3.5 rounded-2xl font-bold text-sm tracking-wide flex items-center gap-2.5">
+                <i class="fa-solid fa-diagram-project"></i>
+                <span>Explore Projects</span>
+              </a>
+
+              <a href="#contact" class="hero-anim-cta btn-secondary-glow px-6 py-3.5 rounded-2xl font-semibold text-sm text-slate-100 flex items-center gap-2.5">
+                <i class="fa-regular fa-envelope text-[#FFCA06]"></i>
+                <span>Get in Touch</span>
+              </a>
+
+              <!-- Copy Email Shortcut Pill -->
+              <button id="copy-email-hero-btn" data-email="netysulistyorini.edu@gmail.com" class="hero-anim-cta btn-secondary-glow px-4 py-3.5 rounded-2xl text-sm font-mono text-slate-300 hover:text-white flex items-center gap-2 group cursor-pointer" title="Click to copy email address">
+                <i class="fa-regular fa-copy text-[#FFCA06] group-hover:scale-110 transition-transform"></i>
+                <span class="hidden sm:inline">Copy Email</span>
+              </button>
+            </div>
+
+            <!-- Social Links Strip -->
+            <div class="hero-anim-social flex items-center gap-4 pt-2 text-slate-400">
+              <span class="text-xs font-mono uppercase tracking-wider text-slate-400">Connect:</span>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-brand-surface/80 border border-[#FFCA06]/40 flex items-center justify-center hover:text-[#FFCA06] hover:border-[#FFCA06] hover:shadow-[0_0_15px_rgba(255,202,6,0.5)] transition-all duration-300 hover:-translate-y-1" aria-label="LinkedIn Profile">
+                <i class="fa-brands fa-linkedin-in text-sm"></i>
+              </a>
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-brand-surface/80 border border-[#C91C7A]/30 flex items-center justify-center hover:text-[#C91C7A] hover:border-[#C91C7A] hover:shadow-[0_0_15px_rgba(201,28,122,0.5)] transition-all duration-300 hover:-translate-y-1" aria-label="GitHub Profile">
+                <i class="fa-brands fa-github text-sm"></i>
+              </a>
+              <a href="mailto:netysulistyorini.edu@gmail.com" class="w-10 h-10 rounded-xl bg-brand-surface/80 border border-[#FFA726]/30 flex items-center justify-center hover:text-[#FFA726] hover:border-[#FFA726] hover:shadow-[0_0_15px_rgba(255,167,38,0.5)] transition-all duration-300 hover:-translate-y-1" aria-label="Email Nety">
+                <i class="fa-solid fa-at text-sm"></i>
+              </a>
+            </div>
+
+          </div>
+
+          <!-- Hero Visual: Cybernetic Glass Terminal Display (Cols 8-12) -->
+          <div class="lg:col-span-5 flex justify-center lg:justify-end relative">
+            <div class="relative w-full max-w-md">
+              
+              <!-- Multi-layered Ambient Glow Aura -->
+              <div class="absolute -inset-2 bg-gradient-to-r from-[#C91C7A] via-[#68097E] to-[#FFCA06] rounded-3xl blur-2xl opacity-35 animate-pulse"></div>
+
+              <!-- Main Glass Terminal Card -->
+              <div class="hero-anim-profile glass-card relative rounded-3xl p-6 sm:p-8 overflow-hidden">
+                <div class="card-spotlight"></div>
+                
+                <!-- Terminal Bar Header -->
+                <div class="flex items-center justify-between border-b border-white/10 pb-4 mb-6">
+                  <div class="flex items-center gap-2">
+                    <span class="w-3 h-3 rounded-full bg-rose-500 shadow-[0_0_8px_#f43f5e] inline-block"></span>
+                    <span class="w-3 h-3 rounded-full bg-amber-400 shadow-[0_0_8px_#fbbf24] inline-block"></span>
+                    <span class="w-3 h-3 rounded-full bg-emerald-400 shadow-[0_0_8px_#34d399] inline-block"></span>
+                  </div>
+                  <span class="text-[11px] font-mono text-[#D8B4E2] flex items-center gap-1.5">
+                    <i class="fa-solid fa-terminal text-[#FFCA06] text-[10px]"></i>
+                    <span>profile.system.json</span>
+                  </span>
+                </div>
+
+                <!-- Profile Head with Radiant Avatar -->
+                <div class="flex items-center gap-4 mb-6">
+                  <div class="relative group">
+                    <div class="w-20 h-20 rounded-2xl bg-gradient-to-tr from-[#C91C7A] via-[#68097E] to-[#FFCA06] p-[2px] shadow-[0_0_25px_rgba(201,28,122,0.5)]">
+                      <div class="w-full h-full bg-brand-dark rounded-[14px] flex flex-col items-center justify-center relative overflow-hidden">
+                        <i class="fa-solid fa-user-tie text-3xl text-transparent bg-clip-text bg-gradient-to-br from-[#FFCA06] via-[#FFA726] to-[#C91C7A]"></i>
+                      </div>
+                    </div>
+                    <span class="absolute -bottom-1 -right-1 w-6 h-6 rounded-full bg-brand-dark border-2 border-brand-surface flex items-center justify-center text-[10px] text-[#FFCA06] shadow-[0_0_8px_#FFCA06]">
+                      <i class="fa-solid fa-check"></i>
+                    </span>
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-extrabold text-white">Nety Sulistyorini</h3>
+                    <p class="text-xs font-mono text-[#FFCA06] font-semibold">D-IV Information Systems Business</p>
+                    <p class="text-xs text-slate-400 mt-1 flex items-center gap-1.5">
+                      <i class="fa-solid fa-location-dot text-[#C91C7A] text-[11px]"></i>
+                      <span>Malang & Kediri, East Java</span>
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Structured Code-like preview -->
+                <div class="space-y-3 font-mono text-xs bg-brand-dark/80 rounded-2xl p-4 border border-[#FFCA06]/20 shadow-inner">
+                  <div class="flex items-start justify-between">
+                    <span class="text-slate-400">"academicStatus":</span>
+                    <span class="text-[#FFCA06] font-semibold drop-shadow-[0_0_6px_rgba(255,202,6,0.6)]">"5th Semester Active"</span>
+                  </div>
+                  <div class="flex items-start justify-between">
+                    <span class="text-slate-400">"institution":</span>
+                    <span class="text-[#C91C7A] font-semibold">"Politeknik Negeri Malang"</span>
+                  </div>
+                  <div class="flex items-start justify-between">
+                    <span class="text-slate-400">"primaryTrack":</span>
+                    <span class="text-[#FFA726] font-semibold">"Business & System Analysis"</span>
+                  </div>
+                  <div class="flex items-start justify-between">
+                    <span class="text-slate-400">"governanceFramework":</span>
+                    <span class="text-[#FFCA06] font-semibold">"COBIT 2019"</span>
+                  </div>
+                  <div class="flex items-start justify-between">
+                    <span class="text-slate-400">"coreStack":</span>
+                    <span class="text-[#D8B4E2]">["MySQL", "React", "Laravel"]</span>
+                  </div>
+                </div>
+
+                <!-- Floating Badges in Card -->
+                <div class="mt-6 flex flex-wrap gap-2 pt-2 border-t border-white/10">
+                  <span class="px-2.5 py-1 rounded-lg text-[11px] font-mono bg-[#3F194D] border border-[#FFCA06]/40 text-[#FFCA06] shadow-[0_0_10px_rgba(255,202,6,0.2)]">
+                    <i class="fa-solid fa-magnifying-glass-chart mr-1 text-[10px]"></i> Process Modeling
+                  </span>
+                  <span class="px-2.5 py-1 rounded-lg text-[11px] font-mono bg-[#3F194D] border border-[#C91C7A]/40 text-[#C91C7A] shadow-[0_0_10px_rgba(201,28,122,0.2)]">
+                    <i class="fa-solid fa-database mr-1 text-[10px]"></i> Database Architecture
+                  </span>
+                  <span class="px-2.5 py-1 rounded-lg text-[11px] font-mono bg-[#3F194D] border border-[#FFA726]/40 text-[#FFA726] shadow-[0_0_10px_rgba(255,167,38,0.2)]">
+                    <i class="fa-solid fa-shield-halved mr-1 text-[10px]"></i> IT Audit
+                  </span>
+                </div>
+
+              </div>
+
+              <!-- Floating Micro-card 1 (Top Right) -->
+              <div class="hero-anim-float float-animate hidden sm:flex absolute -top-5 -right-5 items-center gap-3 glass-card glass-card-purple px-4 py-2.5 rounded-2xl shadow-2xl">
+                <div class="w-8 h-8 rounded-xl bg-[#C91C7A]/25 text-[#FFCA06] flex items-center justify-center shadow-[0_0_10px_rgba(201,28,122,0.4)]">
+                  <i class="fa-solid fa-award text-sm"></i>
+                </div>
+                <div class="text-left">
+                  <p class="text-[10px] text-slate-400 uppercase font-mono font-bold">Award</p>
+                  <p class="text-xs font-bold text-white">KATULISTIWA UB '26</p>
+                </div>
+              </div>
+
+              <!-- Floating Micro-card 2 (Bottom Left) -->
+              <div class="hero-anim-float float-animate-delayed hidden sm:flex absolute -bottom-5 -left-5 items-center gap-3 glass-card px-4 py-2.5 rounded-2xl shadow-2xl">
+                <div class="w-8 h-8 rounded-xl bg-[#68097E]/30 text-[#FFCA06] flex items-center justify-center shadow-[0_0_10px_rgba(255,202,6,0.4)]">
+                  <i class="fa-solid fa-code-branch text-sm"></i>
+                </div>
+                <div class="text-left">
+                  <p class="text-[10px] text-slate-400 uppercase font-mono font-bold">Organization</p>
+                  <p class="text-xs font-bold text-white">HMTI External Dept</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-20 lg:py-28 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="section-header text-center max-w-3xl mx-auto mb-16">
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glow-badge-status text-xs font-mono text-[#FFCA06] mb-4 font-semibold">
+            <i class="fa-solid fa-sparkles text-[11px]"></i>
+            <span>Professional Profile</span>
+          </div>
+          <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight">
+            Bridging Business Strategy with <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#C91C7A] via-[#FFA726] to-[#FFCA06] drop-shadow-[0_0_20px_rgba(201,28,122,0.4)]">Engineering Excellence</span>
+          </h2>
+          <p class="mt-4 text-base sm:text-lg text-slate-300">
+            Translating complex enterprise requirements into robust, data-backed technical architectures.
+          </p>
+        </div>
+
+        <!-- 3 Pillar Focus Cards with Glowing Glass Borders -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+          
+          <!-- Pillar 1: Business & Systems Analysis -->
+          <div class="glass-card reveal-up rounded-3xl p-8 flex flex-col justify-between h-full group hover:border-[#FFCA06] transition-all">
+            <div class="card-spotlight"></div>
+            <div>
+              <div class="flex items-center justify-between mb-6">
+                <div class="icon-glow-box w-14 h-14 rounded-2xl bg-[#C91C7A]/20 border border-[#C91C7A]/40 flex items-center justify-center text-[#FFCA06] shadow-[0_0_15px_rgba(201,28,122,0.3)]">
+                  <i class="fa-solid fa-chart-diagram text-2xl"></i>
+                </div>
+                <span class="text-[11px] font-mono font-bold text-[#FFCA06] px-3 py-1 rounded-full bg-[#3F194D] border border-[#FFCA06]/30">
+                  PILLAR 01
+                </span>
+              </div>
+              <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-[#FFCA06] transition-colors">
+                Business & System Analysis
+              </h3>
+              <p class="text-sm text-slate-300 leading-relaxed">
+                Synthesizing enterprise needs, diagramming business processes with BPMN/UML, crafting Software Requirement Specifications (SRS), and translating operational bottlenecks into clear functional solutions.
+              </p>
+              
+              <ul class="mt-5 space-y-2 text-xs text-slate-300">
+                <li class="flex items-center gap-2">
+                  <i class="fa-solid fa-circle-check text-[#FFCA06] text-[11px]"></i>
+                  <span>BPMN 2.0 & UML System Workflows</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <i class="fa-solid fa-circle-check text-[#FFCA06] text-[11px]"></i>
+                  <span>SRS Documentation & User Stories</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <i class="fa-solid fa-circle-check text-[#FFCA06] text-[11px]"></i>
+                  <span>Gap Analysis & Feasibility Studies</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div class="mt-6 pt-5 border-t border-white/10 flex flex-wrap gap-2">
+              <span class="text-[11px] font-mono text-[#FFCA06] bg-[#3F194D] border border-[#FFCA06]/35 px-2.5 py-1 rounded-md">Process Mapping</span>
+              <span class="text-[11px] font-mono text-[#FFCA06] bg-[#3F194D] border border-[#FFCA06]/35 px-2.5 py-1 rounded-md">SRS Specs</span>
+              <span class="text-[11px] font-mono text-[#FFCA06] bg-[#3F194D] border border-[#FFCA06]/35 px-2.5 py-1 rounded-md">Use Cases</span>
+            </div>
+          </div>
+
+          <!-- Pillar 2: IT Governance & Audit -->
+          <div class="glass-card glass-card-purple reveal-up rounded-3xl p-8 flex flex-col justify-between h-full group hover:border-purple-400 transition-all">
+            <div class="card-spotlight"></div>
+            <div>
+              <div class="flex items-center justify-between mb-6">
+                <div class="icon-glow-box w-14 h-14 rounded-2xl bg-[#68097E]/30 border border-[#FFCA06]/40 flex items-center justify-center text-[#FFCA06] shadow-[0_0_15px_rgba(255,202,6,0.3)]">
+                  <i class="fa-solid fa-shield-halved text-2xl"></i>
+                </div>
+                <span class="text-[11px] font-mono font-bold text-[#D8B4E2] px-3 py-1 rounded-full bg-[#3F194D] border border-purple-400/30">
+                  PILLAR 02
+                </span>
+              </div>
+              <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-[#D8B4E2] transition-colors">
+                IT Audit & Governance
+              </h3>
+              <p class="text-sm text-slate-300 leading-relaxed">
+                Evaluating information systems against industry standards such as <strong class="text-white font-semibold">COBIT 2019</strong>. Ensuring enterprise IT alignments, risk mitigation, audit readiness, and continuous control monitoring.
+              </p>
+              
+              <ul class="mt-5 space-y-2 text-xs text-slate-300">
+                <li class="flex items-center gap-2">
+                  <i class="fa-solid fa-circle-check text-[#D8B4E2] text-[11px]"></i>
+                  <span>COBIT 2019 Governance Objectives</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <i class="fa-solid fa-circle-check text-[#D8B4E2] text-[11px]"></i>
+                  <span>IT General Controls (ITGC) Audit</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <i class="fa-solid fa-circle-check text-[#D8B4E2] text-[11px]"></i>
+                  <span>Capability Level & Risk Assessment</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div class="mt-6 pt-5 border-t border-white/10 flex flex-wrap gap-2">
+              <span class="text-[11px] font-mono text-[#FFCA06] bg-[#3F194D] border border-[#C91C7A]/40 px-2.5 py-1 rounded-md">COBIT 2019</span>
+              <span class="text-[11px] font-mono text-[#FFCA06] bg-[#3F194D] border border-[#C91C7A]/40 px-2.5 py-1 rounded-md">Risk Management</span>
+              <span class="text-[11px] font-mono text-[#FFCA06] bg-[#3F194D] border border-[#C91C7A]/40 px-2.5 py-1 rounded-md">Compliance</span>
+            </div>
+          </div>
+
+          <!-- Pillar 3: Data & Full-Stack Implementation -->
+          <div class="glass-card reveal-up rounded-3xl p-8 flex flex-col justify-between h-full group hover:border-[#FFA726] transition-all">
+            <div class="card-spotlight"></div>
+            <div>
+              <div class="flex items-center justify-between mb-6">
+                <div class="icon-glow-box w-14 h-14 rounded-2xl bg-[#C91C7A]/20 border border-[#FFCA06]/40 flex items-center justify-center text-[#FFA726] shadow-[0_0_15px_rgba(201,28,122,0.3)]">
+                  <i class="fa-solid fa-database text-2xl"></i>
+                </div>
+                <span class="text-[11px] font-mono font-bold text-[#FFA726] px-3 py-1 rounded-full bg-[#3F194D] border border-[#FFA726]/30">
+                  PILLAR 03
+                </span>
+              </div>
+              <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-[#FFA726] transition-colors">
+                Data & Web Architecture
+              </h3>
+              <p class="text-sm text-slate-300 leading-relaxed">
+                Designing optimized relational databases with MySQL, building intuitive analytics via Excel and Looker Studio, and implementing full-stack prototypes using React and Laravel ecosystems.
+              </p>
+              
+              <ul class="mt-5 space-y-2 text-xs text-slate-300">
+                <li class="flex items-center gap-2">
+                  <i class="fa-solid fa-circle-check text-[#FFA726] text-[11px]"></i>
+                  <span>Relational Database Normalization (3NF)</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <i class="fa-solid fa-circle-check text-[#FFA726] text-[11px]"></i>
+                  <span>Looker Studio & Excel KPI Dashboards</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <i class="fa-solid fa-circle-check text-[#FFA726] text-[11px]"></i>
+                  <span>Full-Stack Prototyping (React & Laravel)</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div class="mt-6 pt-5 border-t border-white/10 flex flex-wrap gap-2">
+              <span class="text-[11px] font-mono text-[#FFA726] bg-[#3F194D] border border-[#FFCA06]/35 px-2.5 py-1 rounded-md">MySQL Design</span>
+              <span class="text-[11px] font-mono text-[#FFA726] bg-[#3F194D] border border-[#FFCA06]/35 px-2.5 py-1 rounded-md">Looker / Excel</span>
+              <span class="text-[11px] font-mono text-[#FFA726] bg-[#3F194D] border border-[#FFCA06]/35 px-2.5 py-1 rounded-md">React / Laravel</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="py-20 lg:py-28 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header -->
+        <div class="section-header flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+          <div>
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glow-badge-status text-xs font-mono text-[#C91C7A] mb-4 font-semibold">
+              <i class="fa-solid fa-code text-[11px]"></i>
+              <span>Core Competencies</span>
+            </div>
+            <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight">
+              Technical & Analytical <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#C91C7A] to-[#FFCA06] drop-shadow-[0_0_20px_rgba(201,28,122,0.4)]">Toolkit</span>
+            </h2>
+            <p class="mt-3 text-slate-300 text-base max-w-xl">
+              Equipped with a balanced mix of system governance frameworks, database modeling, data analytics, and modern web application development.
+            </p>
+          </div>
+          <div class="flex items-center gap-2 text-xs font-mono text-slate-300 glass-card px-4 py-2.5 rounded-2xl">
+            <div class="card-spotlight"></div>
+            <i class="fa-solid fa-circle-check text-[#FFCA06] shadow-[0_0_8px_#FFCA06]"></i>
+            <span>Continuously expanding & certified coursework</span>
+          </div>
+        </div>
+
+        <!-- Skills Grid Categorized into 4 Luxury Glass Panels -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+          <!-- Category 1: Systems & Business Analysis -->
+          <div class="glass-card reveal-up rounded-3xl p-6 flex flex-col justify-between">
+            <div class="card-spotlight"></div>
+            <div>
+              <div class="flex items-center gap-3.5 mb-5">
+                <div class="icon-glow-box w-11 h-11 rounded-xl bg-[#C91C7A]/20 border border-[#FFCA06]/40 text-[#FFCA06] flex items-center justify-center shadow-[0_0_12px_rgba(6,182,212,0.3)]">
+                  <i class="fa-solid fa-sitemap text-lg"></i>
+                </div>
+                <div>
+                  <h3 class="text-base font-extrabold text-white">System & BA</h3>
+                  <span class="text-[11px] font-mono text-[#FFCA06]/80">Analysis & Modeling</span>
+                </div>
+              </div>
+
+              <div class="space-y-4">
+                <!-- Skill Item: Business Analysis -->
+                <div class="space-y-1.5">
+                  <div class="flex justify-between text-xs font-semibold">
+                    <span class="text-slate-200 flex items-center gap-1.5">
+                      <i class="fa-solid fa-briefcase text-[#FFCA06] text-[10px]"></i> Business Analysis
+                    </span>
+                    <span class="text-[#FFCA06] font-mono">Advanced</span>
+                  </div>
+                  <div class="h-1.5 w-full bg-slate-900 rounded-full overflow-hidden p-[1px] border border-[#FFCA06]/20">
+                    <div class="h-full bg-gradient-to-r from-[#C91C7A] via-[#68097E] to-[#FFCA06] rounded-full skill-bar-fill w-[90%] shadow-[0_0_10px_#FFCA06]" data-width="90%"></div>
+                  </div>
+                </div>
+
+                <!-- Skill Item: System Analysis -->
+                <div class="space-y-1.5">
+                  <div class="flex justify-between text-xs font-semibold">
+                    <span class="text-slate-200 flex items-center gap-1.5">
+                      <i class="fa-solid fa-network-wired text-[#FFCA06] text-[10px]"></i> System Analysis
+                    </span>
+                    <span class="text-[#FFCA06] font-mono">Advanced</span>
+                  </div>
+                  <div class="h-1.5 w-full bg-slate-900 rounded-full overflow-hidden p-[1px] border border-[#FFCA06]/20">
+                    <div class="h-full bg-gradient-to-r from-[#C91C7A] via-[#68097E] to-[#FFCA06] rounded-full skill-bar-fill w-[88%] shadow-[0_0_10px_#FFCA06]" data-width="88%"></div>
+                  </div>
+                </div>
+
+                <!-- Requirements & UML -->
+                <div class="space-y-1.5">
+                  <div class="flex justify-between text-xs font-semibold">
+                    <span class="text-slate-200 flex items-center gap-1.5">
+                      <i class="fa-solid fa-diagram-successor text-[#FFCA06] text-[10px]"></i> BPMN & UML Design
+                    </span>
+                    <span class="text-[#FFCA06] font-mono">Proficient</span>
+                  </div>
+                  <div class="h-1.5 w-full bg-slate-900 rounded-full overflow-hidden p-[1px] border border-[#FFCA06]/20">
+                    <div class="h-full bg-gradient-to-r from-[#C91C7A] via-[#68097E] to-[#FFCA06] rounded-full skill-bar-fill w-[85%] shadow-[0_0_10px_#FFCA06]" data-width="85%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-6 pt-4 border-t border-white/10 text-[11px] text-slate-400">
+              Gap analysis, SRS documentation, User Stories & Acceptance Criteria.
+            </div>
+          </div>
+
+          <!-- Category 2: IT Governance & Audit -->
+          <div class="glass-card glass-card-purple reveal-up rounded-3xl p-6 flex flex-col justify-between">
+            <div class="card-spotlight"></div>
+            <div>
+              <div class="flex items-center gap-3.5 mb-5">
+                <div class="icon-glow-box w-11 h-11 rounded-xl bg-purple-500/15 border border-purple-400/30 text-[#D8B4E2] flex items-center justify-center shadow-[0_0_12px_rgba(168,85,247,0.3)]">
+                  <i class="fa-solid fa-scale-balanced text-lg"></i>
+                </div>
+                <div>
+                  <h3 class="text-base font-extrabold text-white">IT Governance</h3>
+                  <span class="text-[11px] font-mono text-[#D8B4E2]/80">Audit & Standards</span>
+                </div>
+              </div>
+
+              <div class="space-y-4">
+                <!-- Skill Item: IT Audit (COBIT 2019) -->
+                <div class="space-y-1.5">
+                  <div class="flex justify-between text-xs font-semibold">
+                    <span class="text-slate-200 flex items-center gap-1.5">
+                      <i class="fa-solid fa-stamp text-[#C91C7A] text-[10px]"></i> IT Audit (COBIT 2019)
+                    </span>
+                    <span class="text-[#C91C7A] font-mono">Core Focus</span>
+                  </div>
+                  <div class="h-1.5 w-full bg-slate-900 rounded-full overflow-hidden p-[1px] border border-purple-500/20">
+                    <div class="h-full bg-gradient-to-r from-[#68097E] to-[#C91C7A] rounded-full skill-bar-fill w-[88%] shadow-[0_0_10px_#C91C7A]" data-width="88%"></div>
+                  </div>
+                </div>
+
+                <!-- Internal Controls -->
+                <div class="space-y-1.5">
+                  <div class="flex justify-between text-xs font-semibold">
+                    <span class="text-slate-200 flex items-center gap-1.5">
+                      <i class="fa-solid fa-list-check text-[#C91C7A] text-[10px]"></i> IT Controls (ITGC)
+                    </span>
+                    <span class="text-[#C91C7A] font-mono">Proficient</span>
+                  </div>
+                  <div class="h-1.5 w-full bg-slate-900 rounded-full overflow-hidden p-[1px] border border-purple-500/20">
+                    <div class="h-full bg-gradient-to-r from-[#68097E] to-[#C91C7A] rounded-full skill-bar-fill w-[82%] shadow-[0_0_10px_#C91C7A]" data-width="82%"></div>
+                  </div>
+                </div>
+
+                <!-- Risk Assessment -->
+                <div class="space-y-1.5">
+                  <div class="flex justify-between text-xs font-semibold">
+                    <span class="text-slate-200 flex items-center gap-1.5">
+                      <i class="fa-solid fa-bullseye text-[#C91C7A] text-[10px]"></i> Risk & Maturity
+                    </span>
+                    <span class="text-[#C91C7A] font-mono">Proficient</span>
+                  </div>
+                  <div class="h-1.5 w-full bg-slate-900 rounded-full overflow-hidden p-[1px] border border-purple-500/20">
+                    <div class="h-full bg-gradient-to-r from-[#68097E] to-[#C91C7A] rounded-full skill-bar-fill w-[85%] shadow-[0_0_10px_#C91C7A]" data-width="85%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-6 pt-4 border-t border-white/10 text-[11px] text-slate-400">
+              Capability level assessments, governance objectives, risk mapping.
+            </div>
+          </div>
+
+          <!-- Category 3: Data & Visualization -->
+          <div class="glass-card glass-card-magenta reveal-up rounded-3xl p-6 flex flex-col justify-between">
+            <div class="card-spotlight"></div>
+            <div>
+              <div class="flex items-center gap-3.5 mb-5">
+                <div class="icon-glow-box w-11 h-11 rounded-xl bg-[#68097E]/30 border border-[#C91C7A]/40 text-[#C91C7A] flex items-center justify-center shadow-[0_0_12px_rgba(16,185,129,0.3)]">
+                  <i class="fa-solid fa-chart-pie text-lg"></i>
+                </div>
+                <div>
+                  <h3 class="text-base font-extrabold text-white">Database & Data</h3>
+                  <span class="text-[11px] font-mono text-[#FFCA06]">Modeling & Insights</span>
+                </div>
+              </div>
+
+              <div class="space-y-4">
+                <!-- Skill Item: Database Management (MySQL) -->
+                <div class="space-y-1.5">
+                  <div class="flex justify-between text-xs font-semibold">
+                    <span class="text-slate-200 flex items-center gap-1.5">
+                      <i class="fa-solid fa-database text-[#FFCA06] text-[10px]"></i> MySQL Database
+                    </span>
+                    <span class="text-[#FFCA06] font-mono">Advanced</span>
+                  </div>
+                  <div class="h-1.5 w-full bg-slate-900 rounded-full overflow-hidden p-[1px] border border-[#C91C7A]/20">
+                    <div class="h-full bg-gradient-to-r from-[#FFCA06] to-[#C91C7A] rounded-full skill-bar-fill w-[88%] shadow-[0_0_10px_#FFCA06]" data-width="88%"></div>
+                  </div>
+                </div>
+
+                <!-- Skill Item: Data Visualization (Excel/Looker) -->
+                <div class="space-y-1.5">
+                  <div class="flex justify-between text-xs font-semibold">
+                    <span class="text-slate-200 flex items-center gap-1.5">
+                      <i class="fa-solid fa-chart-line text-[#FFCA06] text-[10px]"></i> Excel / Looker Studio
+                    </span>
+                    <span class="text-[#FFCA06] font-mono">Advanced</span>
+                  </div>
+                  <div class="h-1.5 w-full bg-slate-900 rounded-full overflow-hidden p-[1px] border border-[#C91C7A]/20">
+                    <div class="h-full bg-gradient-to-r from-[#FFCA06] to-[#C91C7A] rounded-full skill-bar-fill w-[86%] shadow-[0_0_10px_#FFCA06]" data-width="86%"></div>
+                  </div>
+                </div>
+
+                <!-- ERD & Relational Design -->
+                <div class="space-y-1.5">
+                  <div class="flex justify-between text-xs font-semibold">
+                    <span class="text-slate-200 flex items-center gap-1.5">
+                      <i class="fa-solid fa-table-cells text-[#FFCA06] text-[10px]"></i> ERD & Normalization
+                    </span>
+                    <span class="text-[#FFCA06] font-mono">Proficient</span>
+                  </div>
+                  <div class="h-1.5 w-full bg-slate-900 rounded-full overflow-hidden p-[1px] border border-[#C91C7A]/20">
+                    <div class="h-full bg-gradient-to-r from-[#FFCA06] to-[#C91C7A] rounded-full skill-bar-fill w-[87%] shadow-[0_0_10px_#FFCA06]" data-width="87%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-6 pt-4 border-t border-white/10 text-[11px] text-slate-400">
+              Complex queries, indexing, interactive dashboards, metric KPIs.
+            </div>
+          </div>
+
+          <!-- Category 4: Web & Software Engineering -->
+          <div class="glass-card reveal-up rounded-3xl p-6 flex flex-col justify-between">
+            <div class="card-spotlight"></div>
+            <div>
+              <div class="flex items-center gap-3.5 mb-5">
+                <div class="icon-glow-box w-11 h-11 rounded-xl bg-[#C91C7A]/20 border border-[#FFCA06]/40 text-[#FFCA06] flex items-center justify-center shadow-[0_0_12px_rgba(56,189,248,0.3)]">
+                  <i class="fa-solid fa-code text-lg"></i>
+                </div>
+                <div>
+                  <h3 class="text-base font-extrabold text-white">Web Development</h3>
+                  <span class="text-[11px] font-mono text-[#FFA726]">Frontend & Backend</span>
+                </div>
+              </div>
+
+              <div class="space-y-4">
+                <!-- Skill Item: React -->
+                <div class="space-y-1.5">
+                  <div class="flex justify-between text-xs font-semibold">
+                    <span class="text-slate-200 flex items-center gap-1.5">
+                      <i class="fa-brands fa-react text-[#FFA726] text-[10px]"></i> React.js
+                    </span>
+                    <span class="text-[#FFA726] font-mono">Proficient</span>
+                  </div>
+                  <div class="h-1.5 w-full bg-slate-900 rounded-full overflow-hidden p-[1px] border border-[#FFCA06]/20">
+                    <div class="h-full bg-gradient-to-r from-[#C91C7A] to-[#FFCA06] rounded-full skill-bar-fill w-[82%] shadow-[0_0_10px_#FFCA06]" data-width="82%"></div>
+                  </div>
+                </div>
+
+                <!-- Skill Item: Laravel -->
+                <div class="space-y-1.5">
+                  <div class="flex justify-between text-xs font-semibold">
+                    <span class="text-slate-200 flex items-center gap-1.5">
+                      <i class="fa-brands fa-laravel text-rose-500 text-[10px]"></i> Laravel Framework
+                    </span>
+                    <span class="text-[#FFA726] font-mono">Proficient</span>
+                  </div>
+                  <div class="h-1.5 w-full bg-slate-900 rounded-full overflow-hidden p-[1px] border border-rose-500/20">
+                    <div class="h-full bg-gradient-to-r from-[#C91C7A] to-[#68097E] rounded-full skill-bar-fill w-[83%] shadow-[0_0_10px_#C91C7A]" data-width="83%"></div>
+                  </div>
+                </div>
+
+                <!-- Skill Item: PHP Native & Flutter -->
+                <div class="space-y-1.5">
+                  <div class="flex justify-between text-xs font-semibold">
+                    <span class="text-slate-200 flex items-center gap-1.5">
+                      <i class="fa-brands fa-php text-indigo-400 text-[10px]"></i> PHP & Flutter
+                    </span>
+                    <span class="text-[#FFA726] font-mono">Intermediate</span>
+                  </div>
+                  <div class="h-1.5 w-full bg-slate-900 rounded-full overflow-hidden p-[1px] border border-indigo-500/20">
+                    <div class="h-full bg-gradient-to-r from-[#68097E] to-[#FFCA06] rounded-full skill-bar-fill w-[80%] shadow-[0_0_10px_#FFCA06]" data-width="80%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-6 pt-4 border-t border-white/10 text-[11px] text-slate-400">
+              REST APIs, MVC pattern, component design, state management.
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Tech Pill Badges Bar with Glowing Rim -->
+        <div class="skill-pills-container mt-12 flex flex-wrap items-center justify-center gap-3">
+          <span class="skill-pill glass-card px-4 py-2 rounded-xl text-xs font-semibold text-slate-200 flex items-center gap-2 hover:border-[#FFCA06] transition-colors">
+            <i class="fa-solid fa-briefcase text-[#FFCA06]"></i> Business Analysis
+          </span>
+          <span class="skill-pill glass-card px-4 py-2 rounded-xl text-xs font-semibold text-slate-200 flex items-center gap-2 hover:border-[#FFCA06] transition-colors">
+            <i class="fa-solid fa-sitemap text-[#FFCA06]"></i> System Analysis
+          </span>
+          <span class="skill-pill glass-card glass-card-purple px-4 py-2 rounded-xl text-xs font-semibold text-slate-200 flex items-center gap-2 hover:border-purple-400 transition-colors">
+            <i class="fa-solid fa-stamp text-[#C91C7A]"></i> IT Audit (COBIT 2019)
+          </span>
+          <span class="skill-pill glass-card glass-card-magenta px-4 py-2 rounded-xl text-xs font-semibold text-slate-200 flex items-center gap-2 hover:border-[#C91C7A] transition-colors">
+            <i class="fa-solid fa-database text-[#FFCA06]"></i> MySQL Database
+          </span>
+          <span class="skill-pill glass-card glass-card-magenta px-4 py-2 rounded-xl text-xs font-semibold text-slate-200 flex items-center gap-2 hover:border-[#C91C7A] transition-colors">
+            <i class="fa-solid fa-chart-simple text-[#FFCA06]"></i> Excel & Looker Studio
+          </span>
+          <span class="skill-pill glass-card px-4 py-2 rounded-xl text-xs font-semibold text-slate-200 flex items-center gap-2 hover:border-[#FFCA06] transition-colors">
+            <i class="fa-brands fa-react text-[#FFA726]"></i> React
+          </span>
+          <span class="skill-pill glass-card px-4 py-2 rounded-xl text-xs font-semibold text-slate-200 flex items-center gap-2 hover:border-rose-400 transition-colors">
+            <i class="fa-brands fa-laravel text-rose-400"></i> Laravel
+          </span>
+          <span class="skill-pill glass-card px-4 py-2 rounded-xl text-xs font-semibold text-slate-200 flex items-center gap-2 hover:border-indigo-400 transition-colors">
+            <i class="fa-brands fa-php text-indigo-400"></i> PHP Native
+          </span>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="py-20 lg:py-28 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header & Filter -->
+        <div class="section-header flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
+          <div>
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glow-badge-status text-xs font-mono text-[#FFCA06] mb-4 font-semibold">
+              <i class="fa-solid fa-rocket text-[11px]"></i>
+              <span>Featured Works</span>
+            </div>
+            <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight">
+              Selected <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#C91C7A] to-[#FFCA06] drop-shadow-[0_0_20px_rgba(201,28,122,0.4)]">Projects</span>
+            </h2>
+            <p class="mt-3 text-slate-300 text-base max-w-xl">
+              Real-world academic and production-ready applications combining system architecture, database optimization, and user-centric interfaces.
+            </p>
+          </div>
+
+          <!-- Project Filter Tabs -->
+          <div class="glass-card flex items-center p-1.5 rounded-2xl self-start md:self-end">
+            <button class="project-filter-btn active px-4 py-1.5 rounded-xl text-xs font-semibold transition-all" data-filter="all">All Projects</button>
+            <button class="project-filter-btn px-4 py-1.5 rounded-xl text-xs font-semibold text-slate-400 hover:text-white transition-all" data-filter="web">Web Apps</button>
+            <button class="project-filter-btn px-4 py-1.5 rounded-xl text-xs font-semibold text-slate-400 hover:text-white transition-all" data-filter="system">Systems & Mobile</button>
+          </div>
+        </div>
+
+        <!-- Project Cards Grid with Glassmorphism and Spotlight -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
+          
+          <!-- Project 1: Evento -->
+          <div class="project-card glass-card reveal-up rounded-3xl overflow-hidden flex flex-col justify-between" data-category="web">
+            <div class="card-spotlight"></div>
+            
+            <!-- Card Visual Banner -->
+            <div class="relative h-48 bg-gradient-to-br from-[#C91C7A]/25 via-[#3F194D] to-[#68097E]/30 p-6 flex flex-col justify-between overflow-hidden border-b border-[#FFCA06]/20">
+              <div class="absolute inset-0 bg-grid-cyber opacity-20"></div>
+              <div class="absolute -right-8 -bottom-8 w-36 h-36 bg-[#C91C7A]/25 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-500"></div>
+              
+              <div class="flex items-center justify-between relative z-10">
+                <span class="px-3 py-1 rounded-full text-[11px] font-mono font-bold bg-[#3F194D] text-[#FFCA06] border border-[#FFCA06]/50 shadow-[0_0_10px_rgba(6,182,212,0.3)]">
+                  Full-Stack Web App
+                </span>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-xl bg-brand-dark/80 border border-white/20 flex items-center justify-center text-slate-200 hover:text-white hover:border-[#FFCA06] hover:shadow-[0_0_12px_#FFCA06] transition-all" title="View Source on GitHub">
+                  <i class="fa-brands fa-github text-sm"></i>
+                </a>
+              </div>
+
+              <!-- Project Brand Emblem -->
+              <div class="relative z-10">
+                <div class="inline-flex items-center gap-3">
+                  <div class="w-11 h-11 rounded-2xl bg-[#C91C7A]/25 border border-[#FFCA06]/50 flex items-center justify-center text-[#FFCA06] shadow-[0_0_15px_rgba(6,182,212,0.4)]">
+                    <i class="fa-solid fa-calendar-check text-xl"></i>
+                  </div>
+                  <div>
+                    <h3 class="text-2xl font-black text-white group-hover:text-[#FFCA06] transition-colors">Evento</h3>
+                    <p class="text-xs font-mono text-[#FFCA06] font-medium">Event Management Web App</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card Content Body -->
+            <div class="p-6 flex-1 flex flex-col justify-between space-y-6">
+              <div>
+                <p class="text-sm text-slate-300 leading-relaxed">
+                  A centralized event orchestration platform designed to streamline ticketing, attendee registration, schedule management, and organizer administrative dashboards with secure authentication.
+                </p>
+
+                <!-- Key Role / Contributions -->
+                <div class="mt-4 pt-3 border-t border-white/10 space-y-2">
+                  <div class="text-xs text-slate-400 font-mono uppercase tracking-wider font-semibold">Key Roles & Architecture:</div>
+                  <ul class="text-xs text-slate-200 space-y-1.5 font-medium">
+                    <li class="flex items-center gap-2">
+                      <i class="fa-solid fa-circle-check text-[#FFCA06] text-xs shadow-[0_0_6px_#22d3ee]"></i>
+                      <span>Designed relational database schema & ERD in MySQL</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                      <i class="fa-solid fa-circle-check text-[#FFCA06] text-xs shadow-[0_0_6px_#22d3ee]"></i>
+                      <span>Built responsive React UI and connected Laravel REST APIs</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Tech Badges & Actions -->
+              <div class="space-y-4">
+                <div class="flex flex-wrap gap-2">
+                  <span class="modal-code-tag">React</span>
+                  <span class="modal-code-tag">Laravel</span>
+                  <span class="modal-code-tag">MySQL</span>
+                  <span class="modal-code-tag">REST API</span>
+                </div>
+
+                <div class="flex items-center justify-between pt-3 border-t border-white/10">
+                  <button class="open-modal-btn text-xs font-bold text-[#FFCA06] hover:text-[#FFA726] flex items-center gap-1.5 transition-colors cursor-pointer" data-project="evento">
+                    <span>View System Specs</span>
+                    <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                  </button>
+                  <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-slate-400 hover:text-white flex items-center gap-1.5 transition-colors">
+                    <i class="fa-brands fa-github text-sm"></i>
+                    <span>Repository</span>
+                  </a>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- Project 2: ReWorth -->
+          <div class="project-card glass-card glass-card-magenta reveal-up rounded-3xl overflow-hidden flex flex-col justify-between" data-category="system">
+            <div class="card-spotlight"></div>
+            
+            <!-- Card Visual Banner -->
+            <div class="relative h-48 bg-gradient-to-br from-[#68097E]/30 via-[#3F194D] to-[#C91C7A]/25 p-6 flex flex-col justify-between overflow-hidden border-b border-[#C91C7A]/20">
+              <div class="absolute inset-0 bg-grid-cyber opacity-20"></div>
+              <div class="absolute -right-8 -bottom-8 w-36 h-36 bg-[#68097E]/35 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-500"></div>
+              
+              <div class="flex items-center justify-between relative z-10">
+                <span class="px-3 py-1 rounded-full text-[11px] font-mono font-bold bg-[#3F194D] text-[#C91C7A] border border-[#C91C7A]/50 shadow-[0_0_10px_rgba(201,28,122,0.35)]">
+                  Mobile & Sustainability
+                </span>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-xl bg-brand-dark/80 border border-white/20 flex items-center justify-center text-slate-200 hover:text-white hover:border-[#C91C7A] hover:shadow-[0_0_12px_#FFCA06] transition-all" title="View Source on GitHub">
+                  <i class="fa-brands fa-github text-sm"></i>
+                </a>
+              </div>
+
+              <!-- Project Brand Emblem -->
+              <div class="relative z-10">
+                <div class="inline-flex items-center gap-3">
+                  <div class="w-11 h-11 rounded-2xl bg-[#68097E]/35 border border-[#FFCA06]/50 flex items-center justify-center text-[#FFCA06] shadow-[0_0_15px_rgba(255,202,6,0.4)]">
+                    <i class="fa-solid fa-recycle text-xl"></i>
+                  </div>
+                  <div>
+                    <h3 class="text-2xl font-black text-white group-hover:text-[#C91C7A] transition-colors">ReWorth</h3>
+                    <p class="text-xs font-mono text-[#C91C7A] font-medium">Waste Bank System</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card Content Body -->
+            <div class="p-6 flex-1 flex flex-col justify-between space-y-6">
+              <div>
+                <p class="text-sm text-slate-300 leading-relaxed">
+                  A digital waste bank platform incentivizing community waste segregation. Converts recyclable deposits into verifiable digital points and financial balance with automated weight tracking.
+                </p>
+
+                <!-- Key Role / Contributions -->
+                <div class="mt-4 pt-3 border-t border-white/10 space-y-2">
+                  <div class="text-xs text-slate-400 font-mono uppercase tracking-wider font-semibold">Key Roles & Architecture:</div>
+                  <ul class="text-xs text-slate-200 space-y-1.5 font-medium">
+                    <li class="flex items-center gap-2">
+                      <i class="fa-solid fa-circle-check text-[#FFCA06] text-xs shadow-[0_0_6px_#34d399]"></i>
+                      <span>Modeled transactional waste-to-point business logic</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                      <i class="fa-solid fa-circle-check text-[#FFCA06] text-xs shadow-[0_0_6px_#34d399]"></i>
+                      <span>Built Flutter mobile interface & PHP backend integration</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Tech Badges & Actions -->
+              <div class="space-y-4">
+                <div class="flex flex-wrap gap-2">
+                  <span class="modal-code-tag">Flutter</span>
+                  <span class="modal-code-tag">PHP</span>
+                  <span class="modal-code-tag">MySQL</span>
+                  <span class="modal-code-tag">Fintech Ledger</span>
+                </div>
+
+                <div class="flex items-center justify-between pt-3 border-t border-white/10">
+                  <button class="open-modal-btn text-xs font-bold text-[#C91C7A] hover:text-[#FFA726] flex items-center gap-1.5 transition-colors cursor-pointer" data-project="reworth">
+                    <span>View System Specs</span>
+                    <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                  </button>
+                  <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-slate-400 hover:text-white flex items-center gap-1.5 transition-colors">
+                    <i class="fa-brands fa-github text-sm"></i>
+                    <span>Repository</span>
+                  </a>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- Project 3: Data Technology Laboratory Information System -->
+          <div class="project-card glass-card glass-card-purple reveal-up rounded-3xl overflow-hidden flex flex-col justify-between" data-category="system">
+            <div class="card-spotlight"></div>
+            
+            <!-- Card Visual Banner -->
+            <div class="relative h-48 bg-gradient-to-br from-[#C91C7A]/20 via-[#3F194D] to-[#FFCA06]/20 p-6 flex flex-col justify-between overflow-hidden border-b border-[#FFCA06]/20">
+              <div class="absolute inset-0 bg-grid-cyber opacity-20"></div>
+              <div class="absolute -right-8 -bottom-8 w-36 h-36 bg-purple-500/25 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-500"></div>
+              
+              <div class="flex items-center justify-between relative z-10">
+                <span class="px-3 py-1 rounded-full text-[11px] font-mono font-bold bg-purple-950/90 text-[#D8B4E2] border border-purple-400/50 shadow-[0_0_10px_rgba(168,85,247,0.3)]">
+                  Academic System
+                </span>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-xl bg-brand-dark/80 border border-white/20 flex items-center justify-center text-slate-200 hover:text-white hover:border-purple-400 hover:shadow-[0_0_12px_#c084fc] transition-all" title="View Source on GitHub">
+                  <i class="fa-brands fa-github text-sm"></i>
+                </a>
+              </div>
+
+              <!-- Project Brand Emblem -->
+              <div class="relative z-10">
+                <div class="inline-flex items-center gap-3">
+                  <div class="w-11 h-11 rounded-2xl bg-purple-500/25 border border-purple-400/50 flex items-center justify-center text-[#D8B4E2] shadow-[0_0_15px_rgba(168,85,247,0.4)]">
+                    <i class="fa-solid fa-microscope text-xl"></i>
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-black text-white group-hover:text-[#D8B4E2] transition-colors leading-tight">Data Tech Lab IS</h3>
+                    <p class="text-xs font-mono text-[#D8B4E2] font-medium">Laboratory Information System</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card Content Body -->
+            <div class="p-6 flex-1 flex flex-col justify-between space-y-6">
+              <div>
+                <p class="text-sm text-slate-300 leading-relaxed">
+                  An institutional laboratory operational system automating equipment reservations, hardware asset cataloging, maintenance logging, and student schedule allocation.
+                </p>
+
+                <!-- Key Role / Contributions -->
+                <div class="mt-4 pt-3 border-t border-white/10 space-y-2">
+                  <div class="text-xs text-slate-400 font-mono uppercase tracking-wider font-semibold">Key Roles & Architecture:</div>
+                  <ul class="text-xs text-slate-200 space-y-1.5 font-medium">
+                    <li class="flex items-center gap-2">
+                      <i class="fa-solid fa-circle-check text-[#C91C7A] text-xs shadow-[0_0_6px_#c084fc]"></i>
+                      <span>Role-Based Access Control (Admin, Lab Tech, Student)</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                      <i class="fa-solid fa-circle-check text-[#C91C7A] text-xs shadow-[0_0_6px_#c084fc]"></i>
+                      <span>Engineered inventory audit trails & schedule conflict checks</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Tech Badges & Actions -->
+              <div class="space-y-4">
+                <div class="flex flex-wrap gap-2">
+                  <span class="modal-code-tag">PHP Native</span>
+                  <span class="modal-code-tag">MySQL</span>
+                  <span class="modal-code-tag">JavaScript</span>
+                  <span class="modal-code-tag">Inventory ERP</span>
+                </div>
+
+                <div class="flex items-center justify-between pt-3 border-t border-white/10">
+                  <button class="open-modal-btn text-xs font-bold text-[#D8B4E2] hover:text-purple-200 flex items-center gap-1.5 transition-colors cursor-pointer" data-project="datalab">
+                    <span>View System Specs</span>
+                    <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                  </button>
+                  <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-slate-400 hover:text-white flex items-center gap-1.5 transition-colors">
+                    <i class="fa-brands fa-github text-sm"></i>
+                    <span>Repository</span>
+                  </a>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- EDUCATION & CERTIFICATIONS SECTION -->
+    <section id="education" class="py-20 lg:py-28 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header -->
+        <div class="section-header text-center max-w-3xl mx-auto mb-16">
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glow-badge-status text-xs font-mono text-[#FFCA06] mb-4 font-semibold">
+            <i class="fa-solid fa-graduation-cap text-[11px]"></i>
+            <span>Academic Background</span>
+          </div>
+          <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight">
+            Education & <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#C91C7A] to-[#FFCA06] drop-shadow-[0_0_20px_rgba(201,28,122,0.4)]">Foundation</span>
+          </h2>
+          <p class="mt-4 text-base sm:text-lg text-slate-300">
+            Solid foundation in applied informatics, enterprise systems, and scientific problem-solving.
+          </p>
+        </div>
+
+        <!-- Education Cards Grid with Radiant Glass Frames -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+
+          <!-- Polinema Card -->
+          <div class="glass-card reveal-up rounded-3xl p-8 group">
+            <div class="card-spotlight"></div>
+            
+            <div class="flex items-start justify-between gap-4">
+              <div class="icon-glow-box w-16 h-16 rounded-2xl bg-[#C91C7A]/20 border border-[#FFCA06]/40 flex items-center justify-center text-[#FFCA06] shadow-[0_0_20px_rgba(6,182,212,0.3)]">
+                <i class="fa-solid fa-building-columns text-3xl"></i>
+              </div>
+              <span class="px-4 py-1.5 rounded-full text-xs font-mono font-bold bg-[#3F194D] text-[#FFCA06] border border-[#FFCA06]/50 shadow-[0_0_12px_rgba(255,202,6,0.35)] flex items-center gap-1.5">
+                <i class="fa-solid fa-star text-[10px]"></i> GPA: 3.76 / 4.00
+              </span>
+            </div>
+
+            <div class="mt-6">
+              <span class="text-xs font-mono text-[#FFCA06] uppercase tracking-widest font-bold">Applied Bachelor (D-IV)</span>
+              <h3 class="text-2xl sm:text-3xl font-extrabold text-white mt-1 group-hover:text-[#FFCA06] transition-colors">
+                State Polytechnic of Malang
+              </h3>
+              <p class="text-slate-200 font-semibold text-sm mt-0.5">
+                Politeknik Negeri Malang (POLINEMA)
+              </p>
+              <p class="text-xs text-brand-subtext mt-1 font-medium">
+                Department of Information Technology — Study Program in Information Systems Business
+              </p>
+            </div>
+
+            <div class="mt-6 pt-6 border-t border-white/10 space-y-3">
+              <div class="flex items-center justify-between text-xs font-mono text-slate-300">
+                <span class="flex items-center gap-2"><i class="fa-regular fa-calendar text-[#FFCA06]"></i> Period: 2024 – 2028</span>
+                <span class="text-[#FFCA06] font-bold">5th Semester (Active)</span>
+              </div>
+              <div class="text-xs text-slate-300 leading-relaxed bg-brand-dark/70 p-4 rounded-2xl border border-[#FFCA06]/20">
+                <strong class="text-white block mb-1">Focus Areas & Relevant Modules:</strong>
+                Enterprise Architecture, System Analysis & Design (SAD), Database Management Systems (DBMS), IT Audit & Risk Management (COBIT 2019), Business Process Modeling (BPMN).
+              </div>
+            </div>
+          </div>
+
+          <!-- Senior High School Card -->
+          <div class="glass-card glass-card-purple reveal-up rounded-3xl p-8 group">
+            <div class="card-spotlight"></div>
+            
+            <div class="flex items-start justify-between gap-4">
+              <div class="icon-glow-box w-16 h-16 rounded-2xl bg-purple-500/15 border border-purple-400/40 flex items-center justify-center text-[#D8B4E2] shadow-[0_0_20px_rgba(168,85,247,0.3)]">
+                <i class="fa-solid fa-school text-3xl"></i>
+              </div>
+              <span class="px-4 py-1.5 rounded-full text-xs font-mono font-bold bg-purple-950/90 text-[#D8B4E2] border border-purple-400/50 shadow-[0_0_12px_rgba(168,85,247,0.3)]">
+                Graduated with Honors
+              </span>
+            </div>
+
+            <div class="mt-6">
+              <span class="text-xs font-mono text-[#C91C7A] uppercase tracking-widest font-bold">Senior Secondary Education</span>
+              <h3 class="text-2xl sm:text-3xl font-extrabold text-white mt-1 group-hover:text-[#D8B4E2] transition-colors">
+                State Islamic Senior High School 1 Kediri City
+              </h3>
+              <p class="text-slate-200 font-semibold text-sm mt-0.5">
+                MAN 1 Kota Kediri
+              </p>
+              <p class="text-xs text-brand-subtext mt-1 font-medium">
+                Concentration in Mathematics & Natural Sciences (MIPA)
+              </p>
+            </div>
+
+            <div class="mt-6 pt-6 border-t border-white/10 space-y-3">
+              <div class="flex items-center justify-between text-xs font-mono text-slate-300">
+                <span class="flex items-center gap-2"><i class="fa-regular fa-calendar text-[#C91C7A]"></i> Period: 2021 – 2024</span>
+                <span class="text-slate-200 font-semibold">Kediri, East Java</span>
+              </div>
+              <div class="text-xs text-slate-300 leading-relaxed bg-brand-dark/70 p-4 rounded-2xl border border-purple-400/20">
+                <strong class="text-white block mb-1">Key Milestones & Foundations:</strong>
+                Solid mathematical logic, active scientific problem-solving, English proficiency honors, and participation in premier tech talent programs (Samsung Innovation Campus).
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ORGANIZATIONAL EXPERIENCE SECTION -->
+    <section id="experience" class="py-20 lg:py-28 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header -->
+        <div class="section-header text-center max-w-3xl mx-auto mb-16">
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glow-badge-status text-xs font-mono text-[#C91C7A] mb-4 font-semibold">
+            <i class="fa-solid fa-users text-[11px]"></i>
+            <span>Leadership & Collaboration</span>
+          </div>
+          <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight">
+            Organizational <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#C91C7A] to-[#FFCA06] drop-shadow-[0_0_20px_rgba(201,28,122,0.4)]">Experience</span>
+          </h2>
+          <p class="mt-4 text-base sm:text-lg text-slate-300">
+            Fostering communication, strategic delegation, and community impact across departmental and institutional initiatives.
+          </p>
+        </div>
+
+        <!-- Experience Timeline Cards -->
+        <div class="max-w-4xl mx-auto space-y-8 relative">
+          
+          <!-- Experience Card 1: HMTI -->
+          <div class="glass-card glass-card-purple reveal-up rounded-3xl p-6 sm:p-8">
+            <div class="card-spotlight"></div>
+            
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-white/10 pb-4 mb-6">
+              <div class="flex items-center gap-4">
+                <div class="icon-glow-box w-13 h-13 rounded-2xl bg-purple-500/15 border border-purple-400/40 flex items-center justify-center text-[#D8B4E2] shadow-[0_0_15px_rgba(168,85,247,0.3)]">
+                  <i class="fa-solid fa-handshake text-2xl"></i>
+                </div>
+                <div>
+                  <h3 class="text-xl sm:text-2xl font-black text-white group-hover:text-[#D8B4E2] transition-colors">
+                    HMTI External Department
+                  </h3>
+                  <p class="text-xs sm:text-sm text-brand-neonPurple font-semibold">
+                    Himpunan Mahasiswa Teknologi Informasi (IT Student Association)
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="px-4 py-1.5 rounded-full text-xs font-mono font-bold bg-purple-950/90 text-[#D8B4E2] border border-purple-400/50 shadow-[0_0_10px_rgba(168,85,247,0.3)]">
+                  2025 – 2026
+                </span>
+              </div>
+            </div>
+
+            <div class="space-y-3">
+              <p class="text-sm text-slate-200 leading-relaxed font-normal">
+                Spearheading external relations, inter-university collaborations, and corporate partnerships for the Information Technology Student Association.
+              </p>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+                <div class="flex items-start gap-2.5 text-xs text-slate-300 bg-brand-dark/70 p-3.5 rounded-2xl border border-purple-400/20">
+                  <i class="fa-solid fa-circle-check text-[#C91C7A] mt-0.5 shadow-[0_0_6px_#c084fc]"></i>
+                  <span>Facilitated cross-organizational benchmarking and industry visit programs.</span>
+                </div>
+                <div class="flex items-start gap-2.5 text-xs text-slate-300 bg-brand-dark/70 p-3.5 rounded-2xl border border-purple-400/20">
+                  <i class="fa-solid fa-circle-check text-[#C91C7A] mt-0.5 shadow-[0_0_6px_#c084fc]"></i>
+                  <span>Coordinated external guest speakers and sponsorship negotiations for tech conferences.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Experience Card 2: Head Coordinator Mentors -->
+          <div class="glass-card reveal-up rounded-3xl p-6 sm:p-8">
+            <div class="card-spotlight"></div>
+            
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-white/10 pb-4 mb-6">
+              <div class="flex items-center gap-4">
+                <div class="icon-glow-box w-13 h-13 rounded-2xl bg-[#C91C7A]/20 border border-[#FFCA06]/40 flex items-center justify-center text-[#FFCA06] shadow-[0_0_15px_rgba(6,182,212,0.3)]">
+                  <i class="fa-solid fa-people-arrows text-2xl"></i>
+                </div>
+                <div>
+                  <h3 class="text-xl sm:text-2xl font-black text-white group-hover:text-[#FFCA06] transition-colors">
+                    Head Coordinator of New Student Group Mentors
+                  </h3>
+                  <p class="text-xs sm:text-sm text-[#FFCA06] font-semibold">
+                    New Student Orientation & Academic Onboarding Program
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="px-4 py-1.5 rounded-full text-xs font-mono font-bold bg-[#3F194D] text-[#FFCA06] border border-[#FFCA06]/50 shadow-[0_0_10px_rgba(6,182,212,0.3)]">
+                  2024
+                </span>
+              </div>
+            </div>
+
+            <div class="space-y-3">
+              <p class="text-sm text-slate-200 leading-relaxed font-normal">
+                Directly supervised mentor teams in guiding and orienting incoming freshmen, ensuring seamless academic onboarding, student welfare, and adherence to department values.
+              </p>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+                <div class="flex items-start gap-2.5 text-xs text-slate-300 bg-brand-dark/70 p-3.5 rounded-2xl border border-[#FFCA06]/20">
+                  <i class="fa-solid fa-circle-check text-[#FFCA06] mt-0.5 shadow-[0_0_6px_#22d3ee]"></i>
+                  <span>Led briefing, mentorship guidelines, and conflict resolution across all mentor groups.</span>
+                </div>
+                <div class="flex items-start gap-2.5 text-xs text-slate-300 bg-brand-dark/70 p-3.5 rounded-2xl border border-[#FFCA06]/20">
+                  <i class="fa-solid fa-circle-check text-[#FFCA06] mt-0.5 shadow-[0_0_6px_#22d3ee]"></i>
+                  <span>Bridged strategic communication between faculty steering committees and students.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+        <!-- ACHIEVEMENTS SECTION -->
+    <section id="achievements" class="py-20 lg:py-28 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header -->
+        <div class="section-header text-center max-w-3xl mx-auto mb-16">
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glow-badge-status text-xs font-mono text-[#FFCA06] mb-4 font-semibold">
+            <i class="fa-solid fa-trophy text-[11px]"></i>
+            <span>Honors & Recognitions</span>
+          </div>
+          <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight">
+            Recognitions & <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#FFCA06] via-[#FFA726] to-[#C91C7A] drop-shadow-[0_0_20px_rgba(255,202,6,0.4)]">Achievements</span>
+          </h2>
+          <p class="mt-4 text-base sm:text-lg text-slate-300">
+            Validated capabilities across national scientific paper competitions, language olympiads, corporate tech incubations, and organizational leadership.
+          </p>
+        </div>
+
+        <!-- Systematic Layout: 1 Featured Spotlight Honor + 6 Grid Cards -->
+        <div class="space-y-8">
+          
+          <!-- FEATURED FLAGSHIP HONOR: KATULISTIWA UB (Full Width Showcase Card) -->
+          <div class="glass-card glass-card-yellow reveal-up rounded-3xl p-8 sm:p-10 relative overflow-hidden border border-[#FFCA06]/40 shadow-[0_0_40px_rgba(255,202,6,0.15)] group">
+            <div class="card-spotlight"></div>
+            
+            <div class="absolute -right-16 -top-16 w-56 h-56 rounded-full bg-[#FFCA06]/10 blur-3xl pointer-events-none group-hover:scale-125 transition-transform duration-700"></div>
+            <div class="absolute -left-16 -bottom-16 w-56 h-56 rounded-full bg-[#C91C7A]/15 blur-3xl pointer-events-none group-hover:scale-125 transition-transform duration-700"></div>
+
+            <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+              
+              <!-- Left: Meta & Title (Cols 1-7) -->
+              <div class="lg:col-span-7 space-y-4">
+                <div class="flex flex-wrap items-center gap-3">
+                  <span class="px-3.5 py-1 rounded-full text-xs font-mono font-bold bg-[#FFCA06]/15 text-[#FFCA06] border border-[#FFCA06]/50 shadow-[0_0_12px_rgba(255,202,6,0.3)] flex items-center gap-1.5">
+                    <i class="fa-solid fa-crown text-[10px]"></i> FEATURED FLAGSHIP HONOR
+                  </span>
+                  <span class="px-3 py-1 rounded-full text-xs font-mono font-bold bg-[#3F194D] text-[#D8B4E2] border border-white/10">
+                    2026
+                  </span>
+                  <span class="text-xs font-mono text-slate-400">National Level</span>
+                </div>
+
+                <div>
+                  <h3 class="text-2xl sm:text-3xl lg:text-4xl font-black text-white tracking-tight group-hover:text-[#FFCA06] transition-colors">
+                    National Semifinalist &bull; KATULISTIWA UB
+                  </h3>
+                  <p class="text-sm font-semibold text-[#FFA726] mt-1 font-mono">
+                    Universitas Brawijaya &bull; National Scientific Paper Competition (KATULISTIWA)
+                  </p>
+                </div>
+
+                <p class="text-sm text-slate-300 leading-relaxed max-w-2xl">
+                  Selected as a national semifinalist in the prestigious Karya Tulis Ilmiah competition at Universitas Brawijaya. Formulated an innovative business-technology solution addressing critical socioeconomic challenges with systematic system architecture and empirical validation.
+                </p>
+
+                <div class="flex flex-wrap gap-2 pt-1">
+                  <span class="text-[11px] font-mono px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-slate-200">
+                    <i class="fa-solid fa-check text-[#FFCA06] mr-1.5"></i>Scientific Paper
+                  </span>
+                  <span class="text-[11px] font-mono px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-slate-200">
+                    <i class="fa-solid fa-check text-[#FFCA06] mr-1.5"></i>IT Feasibility Model
+                  </span>
+                  <span class="text-[11px] font-mono px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-slate-200">
+                    <i class="fa-solid fa-check text-[#FFCA06] mr-1.5"></i>National Stage Defense
+                  </span>
+                </div>
+              </div>
+
+              <!-- Right: Visual Badge / Distinction Card (Cols 8-12) -->
+              <div class="lg:col-span-5 flex flex-col justify-center items-center lg:items-end">
+                <div class="w-full max-w-sm p-6 rounded-2xl bg-brand-dark/90 border border-[#FFCA06]/30 text-center space-y-3">
+                  <div class="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-tr from-[#FFCA06] to-[#C91C7A] p-[1.5px] shadow-[0_0_25px_rgba(255,202,6,0.35)] flex items-center justify-center">
+                    <div class="w-full h-full bg-[#1A0B2E] rounded-[14px] flex items-center justify-center text-[#FFCA06]">
+                      <i class="fa-solid fa-award text-3xl"></i>
+                    </div>
+                  </div>
+                  <h4 class="text-lg font-bold text-white">Semifinalist Distinction</h4>
+                  <p class="text-xs text-slate-400 font-mono">Recognized among top university innovators nationwide</p>
+                  <div class="pt-2 border-t border-white/10 flex items-center justify-center gap-2 text-xs font-mono text-[#FFCA06]">
+                    <i class="fa-solid fa-certificate"></i> Verified Certificate Awarded
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- BALANCED 6-CARD GRID (3 Columns x 2 Rows) -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+            
+            <!-- Card 2: Gold Medalist English Olympiad -->
+            <div class="glass-card reveal-up rounded-3xl p-7 flex flex-col justify-between h-full group hover:border-[#FFCA06] transition-all">
+              <div class="card-spotlight"></div>
+              <div class="space-y-4">
+                <div class="flex items-center justify-between">
+                  <div class="icon-glow-box w-12 h-12 rounded-2xl bg-[#68097E]/30 border border-[#FFCA06]/40 flex items-center justify-center text-[#FFCA06] shadow-[0_0_15px_rgba(255,202,6,0.3)]">
+                    <i class="fa-solid fa-trophy text-xl"></i>
+                  </div>
+                  <span class="px-3.5 py-1 rounded-full text-xs font-mono font-bold bg-[#3F194D] text-[#FFCA06] border border-[#FFCA06]/50">
+                    2023
+                  </span>
+                </div>
+                <div>
+                  <span class="text-[11px] font-mono text-yellow-400 uppercase tracking-wider font-bold">Language Proficiency</span>
+                  <h3 class="text-xl font-extrabold text-white group-hover:text-yellow-300 transition-colors mt-1">
+                    Gold Medalist English Olympiad
+                  </h3>
+                  <p class="text-xs font-mono text-slate-400 mt-0.5">Lembaga Kompetisi Indonesia</p>
+                </div>
+                <p class="text-xs text-slate-300 leading-relaxed">
+                  Awarded Gold Medal distinction demonstrating superior grammatical precision, critical reading, and professional English articulation.
+                </p>
+              </div>
+              <div class="mt-6 pt-4 border-t border-white/10 flex items-center gap-2 text-xs text-yellow-300 font-mono font-semibold">
+                <i class="fa-solid fa-award"></i>
+                <span>Gold Medal Distinction</span>
+              </div>
+            </div>
+
+            <!-- Card 3: Samsung Innovation Campus -->
+            <div class="glass-card reveal-up rounded-3xl p-7 flex flex-col justify-between h-full group hover:border-[#FFCA06] transition-all">
+              <div class="card-spotlight"></div>
+              <div class="space-y-4">
+                <div class="flex items-center justify-between">
+                  <div class="icon-glow-box w-12 h-12 rounded-2xl bg-[#C91C7A]/20 border border-[#FFCA06]/40 flex items-center justify-center text-[#FFCA06] shadow-[0_0_15px_rgba(6,182,212,0.3)]">
+                    <i class="fa-solid fa-microchip text-xl"></i>
+                  </div>
+                  <span class="px-3.5 py-1 rounded-full text-xs font-mono font-bold bg-[#3F194D] text-[#FFCA06] border border-[#FFCA06]/50">
+                    2022
+                  </span>
+                </div>
+                <div>
+                  <span class="text-[11px] font-mono text-[#FFCA06] uppercase tracking-wider font-bold">Tech Acceleration</span>
+                  <h3 class="text-xl font-extrabold text-white group-hover:text-[#FFCA06] transition-colors mt-1">
+                    Samsung Innovation Campus
+                  </h3>
+                  <p class="text-xs font-mono text-slate-400 mt-0.5">Samsung Electronics Indonesia</p>
+                </div>
+                <p class="text-xs text-slate-300 leading-relaxed">
+                  Completed industry-standard technical training in Design Thinking and Basic Python programming under the Samsung global CSR initiative.
+                </p>
+              </div>
+              <div class="mt-6 pt-4 border-t border-white/10 flex items-center gap-2 text-xs text-[#FFCA06] font-mono font-semibold">
+                <i class="fa-solid fa-certificate"></i>
+                <span>Certified Alum & Innovator</span>
+              </div>
+            </div>
+
+            <!-- Card 4: Vice Commander (PKS) -->
+            <div class="glass-card glass-card-purple reveal-up rounded-3xl p-7 flex flex-col justify-between h-full group hover:border-purple-400 transition-all">
+              <div class="card-spotlight"></div>
+              <div class="space-y-4">
+                <div class="flex items-center justify-between">
+                  <div class="icon-glow-box w-12 h-12 rounded-2xl bg-indigo-500/15 border border-indigo-400/40 flex items-center justify-center text-indigo-300 shadow-[0_0_15px_rgba(99,102,241,0.3)]">
+                    <i class="fa-solid fa-user-shield text-xl"></i>
+                  </div>
+                  <span class="px-3.5 py-1 rounded-full text-xs font-mono font-bold bg-indigo-950/90 text-indigo-300 border border-indigo-400/50">
+                    2021 – 2024
+                  </span>
+                </div>
+                <div>
+                  <span class="text-[11px] font-mono text-indigo-400 uppercase tracking-wider font-bold">Organizational Leadership</span>
+                  <h3 class="text-xl font-extrabold text-white group-hover:text-indigo-300 transition-colors mt-1">
+                    Vice Commander &bull; PKS
+                  </h3>
+                  <p class="text-xs font-mono text-slate-400 mt-0.5">MAN 1 Kota Kediri</p>
+                </div>
+                <p class="text-xs text-slate-300 leading-relaxed">
+                  Served as Vice Commander of the Student Command Force, leading 30 members in enforcing discipline and school regulation execution.
+                </p>
+              </div>
+              <div class="mt-6 pt-4 border-t border-white/10 flex items-center gap-2 text-xs text-indigo-300 font-mono font-semibold">
+                <i class="fa-solid fa-star"></i>
+                <span>Leadership Distinction</span>
+              </div>
+            </div>
+
+            <!-- Card 5: Committee Member (KIR) -->
+            <div class="glass-card reveal-up rounded-3xl p-7 flex flex-col justify-between h-full group hover:border-teal-400 transition-all">
+              <div class="card-spotlight"></div>
+              <div class="space-y-4">
+                <div class="flex items-center justify-between">
+                  <div class="icon-glow-box w-12 h-12 rounded-2xl bg-teal-500/15 border border-teal-400/40 flex items-center justify-center text-teal-300 shadow-[0_0_15px_rgba(20,184,166,0.3)]">
+                    <i class="fa-solid fa-flask text-xl"></i>
+                  </div>
+                  <span class="px-3.5 py-1 rounded-full text-xs font-mono font-bold bg-teal-950/90 text-teal-300 border border-teal-400/50">
+                    2023
+                  </span>
+                </div>
+                <div>
+                  <span class="text-[11px] font-mono text-teal-400 uppercase tracking-wider font-bold">Scientific Research</span>
+                  <h3 class="text-xl font-extrabold text-white group-hover:text-teal-300 transition-colors mt-1">
+                    Committee Member &bull; KIR
+                  </h3>
+                  <p class="text-xs font-mono text-slate-400 mt-0.5">MAN 1 Kota Kediri</p>
+                </div>
+                <p class="text-xs text-slate-300 leading-relaxed">
+                  Collaborated to conduct science and technology research projects, strengthening analytical thinking and empirical methodologies.
+                </p>
+              </div>
+              <div class="mt-6 pt-4 border-t border-white/10 flex items-center gap-2 text-xs text-teal-300 font-mono font-semibold">
+                <i class="fa-solid fa-atom"></i>
+                <span>Research Contributor</span>
+              </div>
+            </div>
+
+            <!-- Card 6: National Essay Competition (UII) -->
+            <div class="glass-card reveal-up rounded-3xl p-7 flex flex-col justify-between h-full group hover:border-rose-400 transition-all">
+              <div class="card-spotlight"></div>
+              <div class="space-y-4">
+                <div class="flex items-center justify-between">
+                  <div class="icon-glow-box w-12 h-12 rounded-2xl bg-rose-500/15 border border-rose-400/40 flex items-center justify-center text-rose-300 shadow-[0_0_15px_rgba(244,63,94,0.3)]">
+                    <i class="fa-solid fa-pen-nib text-xl"></i>
+                  </div>
+                  <span class="px-3.5 py-1 rounded-full text-xs font-mono font-bold bg-rose-950/90 text-rose-300 border border-rose-400/50">
+                    2024
+                  </span>
+                </div>
+                <div>
+                  <span class="text-[11px] font-mono text-rose-400 uppercase tracking-wider font-bold">Academic Writing</span>
+                  <h3 class="text-xl font-extrabold text-white group-hover:text-rose-300 transition-colors mt-1">
+                    National Essay Competition
+                  </h3>
+                  <p class="text-xs font-mono text-slate-400 mt-0.5">Islamic University of Indonesia (UII)</p>
+                </div>
+                <p class="text-xs text-slate-300 leading-relaxed">
+                  Authored competitive analysis on "Building Gen Z's Sensitivity in Textile Technology," honing systematic research and tech communication.
+                </p>
+              </div>
+              <div class="mt-6 pt-4 border-t border-white/10 flex items-center gap-2 text-xs text-rose-300 font-mono font-semibold">
+                <i class="fa-solid fa-scroll"></i>
+                <span>National Contributor</span>
+              </div>
+            </div>
+
+            <!-- Card 7: Public Relations (IKAMANSA) -->
+            <div class="glass-card glass-card-magenta reveal-up rounded-3xl p-7 flex flex-col justify-between h-full group hover:border-[#C91C7A] transition-all">
+              <div class="card-spotlight"></div>
+              <div class="space-y-4">
+                <div class="flex items-center justify-between">
+                  <div class="icon-glow-box w-12 h-12 rounded-2xl bg-[#68097E]/30 border border-[#C91C7A]/40 flex items-center justify-center text-[#C91C7A] shadow-[0_0_15px_rgba(201,28,122,0.3)]">
+                    <i class="fa-solid fa-bullhorn text-xl"></i>
+                  </div>
+                  <span class="px-3.5 py-1 rounded-full text-xs font-mono font-bold bg-[#3F194D] text-[#C91C7A] border border-[#C91C7A]/50">
+                    2025
+                  </span>
+                </div>
+                <div>
+                  <span class="text-[11px] font-mono text-[#FFCA06] uppercase tracking-wider font-bold">Public Relations</span>
+                  <h3 class="text-xl font-extrabold text-white group-hover:text-[#C91C7A] transition-colors mt-1">
+                    Public Relations Staff
+                  </h3>
+                  <p class="text-xs font-mono text-slate-400 mt-0.5">IKAMANSA Campus Expo</p>
+                </div>
+                <p class="text-xs text-slate-300 leading-relaxed">
+                  Spearheaded strategic communications, stakeholder outreach, and publicity operations for the institutional higher education expo.
+                </p>
+              </div>
+              <div class="mt-6 pt-4 border-t border-white/10 flex items-center gap-2 text-xs text-[#C91C7A] font-mono font-semibold">
+                <i class="fa-solid fa-handshake-angle"></i>
+                <span>Event Coordinator</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-20 lg:py-28 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <!-- Contact Pitch & Details (Cols 1-5) -->
+          <div class="contact-col-left lg:col-span-5 space-y-6">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glow-badge-status text-xs font-mono text-[#FFCA06] font-semibold">
+              <i class="fa-regular fa-paper-plane text-[11px]"></i>
+              <span>Get In Touch</span>
+            </div>
+
+            <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight">
+              Ready to <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#C91C7A] to-[#FFCA06] drop-shadow-[0_0_20px_rgba(201,28,122,0.4)]">Collaborate</span> or Hire?
+            </h2>
+
+            <p class="text-slate-300 text-base leading-relaxed">
+              Whether you are looking for an analytical mind to bridge business goals with IT architecture, a dedicated intern for systems analysis, or a partner for tech initiatives — feel free to reach out.
+            </p>
+
+            <!-- Direct Channels List -->
+            <div class="space-y-4 pt-2">
+              
+              <!-- Email Card -->
+              <div class="glass-card rounded-2xl p-4 flex items-center justify-between group">
+                <div class="card-spotlight"></div>
+                <div class="flex items-center gap-3.5">
+                  <div class="icon-glow-box w-11 h-11 rounded-xl bg-[#C91C7A]/20 text-[#FFCA06] flex items-center justify-center border border-[#FFCA06]/40">
+                    <i class="fa-regular fa-envelope text-lg"></i>
+                  </div>
+                  <div>
+                    <span class="text-[11px] font-mono text-slate-400 uppercase font-semibold">Direct Email</span>
+                    <a href="mailto:netysulistyorini.edu@gmail.com" class="block text-sm font-bold text-white group-hover:text-[#FFCA06] transition-colors">
+                      netysulistyorini.edu@gmail.com
+                    </a>
+                  </div>
+                </div>
+                <button id="copy-email-contact-btn" data-email="netysulistyorini.edu@gmail.com" class="p-2.5 rounded-xl bg-white/5 hover:bg-white/10 text-slate-300 hover:text-[#FFCA06] border border-white/10 transition-all cursor-pointer" title="Copy email address">
+                  <i class="fa-regular fa-copy"></i>
+                </button>
+              </div>
+
+              <!-- LinkedIn Link -->
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="glass-card rounded-2xl p-4 flex items-center justify-between group block">
+                <div class="card-spotlight"></div>
+                <div class="flex items-center gap-3.5">
+                  <div class="icon-glow-box w-11 h-11 rounded-xl bg-[#68097E]/30 text-[#FFCA06] flex items-center justify-center border border-[#FFCA06]/40">
+                    <i class="fa-brands fa-linkedin-in text-lg"></i>
+                  </div>
+                  <div>
+                    <span class="text-[11px] font-mono text-slate-400 uppercase font-semibold">Professional Network</span>
+                    <div class="text-sm font-bold text-white group-hover:text-blue-300 transition-colors">
+                      Connect on LinkedIn
+                    </div>
+                  </div>
+                </div>
+                <i class="fa-solid fa-arrow-up-right-from-square text-xs text-slate-400 group-hover:text-white transition-colors"></i>
+              </a>
+
+              <!-- GitHub Link -->
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="glass-card glass-card-purple rounded-2xl p-4 flex items-center justify-between group block">
+                <div class="card-spotlight"></div>
+                <div class="flex items-center gap-3.5">
+                  <div class="icon-glow-box w-11 h-11 rounded-xl bg-purple-500/15 text-[#D8B4E2] flex items-center justify-center border border-purple-400/30">
+                    <i class="fa-brands fa-github text-lg"></i>
+                  </div>
+                  <div>
+                    <span class="text-[11px] font-mono text-slate-400 uppercase font-semibold">Code Repositories</span>
+                    <div class="text-sm font-bold text-white group-hover:text-[#D8B4E2] transition-colors">
+                      Explore GitHub Profile
+                    </div>
+                  </div>
+                </div>
+                <i class="fa-solid fa-arrow-up-right-from-square text-xs text-slate-400 group-hover:text-white transition-colors"></i>
+              </a>
+
+            </div>
+          </div>
+
+          <!-- Quick Message Form Card (Cols 6-12) -->
+          <div class="contact-col-right lg:col-span-7">
+            <div id="contact-card-box" class="glass-card rounded-3xl p-6 sm:p-10 shadow-2xl relative overflow-hidden">
+              <div class="card-spotlight"></div>
+              
+              <!-- Header with Requirements Badge -->
+              <div class="mb-6 space-y-2">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-[11px] font-mono font-semibold text-emerald-400">
+                  <i class="fa-solid fa-shield-halved text-[10px]"></i>
+                  <span>Verified Channel &bull; Anti-Spam Protected</span>
+                </div>
+                <h3 class="text-2xl font-bold text-white">Send a Quick Message</h3>
+                <p class="text-xs text-slate-300 leading-relaxed">
+                  Please ensure your inquiry meets verification standards. Incomplete, automated, or spam submissions are filtered out.
+                </p>
+              </div>
+
+              <!-- Form State -->
+              <form id="contact-form" class="space-y-4" novalidate>
+                <!-- Honeypot (bot prevention) -->
+                <input type="text" id="contact-honeypot" name="_honey" class="hidden" tabindex="-1" autocomplete="off">
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <!-- Name Input -->
+                  <div>
+                    <div class="flex items-center justify-between mb-1.5">
+                      <label for="contact-name" class="block text-xs font-mono font-semibold text-slate-300">
+                        Full Name / Organization <span class="text-[#FFCA06]">*</span>
+                      </label>
+                      <span class="text-[10px] font-mono text-slate-400">Min. 3 letters</span>
+                    </div>
+                    <div class="relative">
+                      <input type="text" id="contact-name" required placeholder="e.g. Alex Morgan / Tech Corp"
+                        class="w-full px-4 py-3 rounded-xl bg-brand-dark/80 border border-[#FFCA06]/20 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-[#FFCA06] transition-all">
+                      <span id="name-status-icon" class="absolute right-3.5 top-3.5 text-xs hidden"></span>
+                    </div>
+                    <p id="err-name" class="hidden text-[11px] font-mono text-rose-400 mt-1.5 flex items-center gap-1.5">
+                      <i class="fa-solid fa-circle-exclamation text-[10px]"></i>
+                      <span>Name must contain at least 3 genuine letters (no numbers or symbols).</span>
+                    </p>
+                  </div>
+
+                  <!-- Email Input -->
+                  <div>
+                    <div class="flex items-center justify-between mb-1.5">
+                      <label for="contact-email" class="block text-xs font-mono font-semibold text-slate-300">
+                        Email Address <span class="text-[#FFCA06]">*</span>
+                      </label>
+                      <span class="text-[10px] font-mono text-slate-400">Valid email</span>
+                    </div>
+                    <div class="relative">
+                      <input type="email" id="contact-email" required placeholder="name@company.com"
+                        class="w-full px-4 py-3 rounded-xl bg-brand-dark/80 border border-[#FFCA06]/20 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-[#FFCA06] transition-all">
+                      <span id="email-status-icon" class="absolute right-3.5 top-3.5 text-xs hidden"></span>
+                    </div>
+                    <p id="err-email" class="hidden text-[11px] font-mono text-rose-400 mt-1.5 flex items-center gap-1.5">
+                      <i class="fa-solid fa-circle-exclamation text-[10px]"></i>
+                      <span>Please enter a valid email address (e.g. name@company.com).</span>
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Subject Input -->
+                <div>
+                  <div class="flex items-center justify-between mb-1.5">
+                    <label for="contact-subject" class="block text-xs font-mono font-semibold text-slate-300">
+                      Subject / Topic <span class="text-[#FFCA06]">*</span>
+                    </label>
+                    <span class="text-[10px] font-mono text-slate-400">Min. 6 characters</span>
+                  </div>
+                  <div class="relative">
+                    <input type="text" id="contact-subject" required placeholder="e.g. Business Analyst Internship / System Analysis Discussion"
+                      class="w-full px-4 py-3 rounded-xl bg-brand-dark/80 border border-[#FFCA06]/20 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-[#FFCA06] transition-all">
+                    <span id="subject-status-icon" class="absolute right-3.5 top-3.5 text-xs hidden"></span>
+                  </div>
+                  <p id="err-subject" class="hidden text-[11px] font-mono text-rose-400 mt-1.5 flex items-center gap-1.5">
+                    <i class="fa-solid fa-circle-exclamation text-[10px]"></i>
+                    <span>Subject is too short. Please describe your inquiry topic in at least 6 characters.</span>
+                  </p>
+                </div>
+
+                <!-- Message Input -->
+                <div>
+                  <div class="flex items-center justify-between mb-1.5">
+                    <label for="contact-message" class="block text-xs font-mono font-semibold text-slate-300">
+                      Message Content <span class="text-[#FFCA06]">*</span>
+                    </label>
+                    <span id="msg-counter" class="text-[10px] font-mono text-slate-400">0 / 25 characters</span>
+                  </div>
+                  <textarea id="contact-message" rows="4" required placeholder="Hello Nety, we reviewed your portfolio and would like to discuss an opportunity..."
+                    class="w-full px-4 py-3 rounded-xl bg-brand-dark/80 border border-[#FFCA06]/20 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-[#FFCA06] transition-all resize-none"></textarea>
+                  <p id="err-message" class="hidden text-[11px] font-mono text-rose-400 mt-1.5 flex items-center gap-1.5">
+                    <i class="fa-solid fa-circle-exclamation text-[10px]"></i>
+                    <span>Message must be at least 25 characters and contain meaningful sentences (min. 3 words).</span>
+                  </p>
+                </div>
+
+                <!-- Security Challenge (Anti-Spam / Anti-Bot) -->
+                <div class="p-3.5 rounded-2xl bg-brand-dark/90 border border-white/10 space-y-2">
+                  <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                    <label for="contact-captcha" class="text-xs font-mono font-semibold text-slate-200 flex items-center gap-2">
+                      <i class="fa-solid fa-calculator text-[#FFCA06]"></i>
+                      <span>Security Verification: <span id="captcha-question" class="text-[#FFCA06] font-bold"></span> = ?</span>
+                    </label>
+                    <span class="text-[10px] font-mono text-slate-400">Required math verification</span>
+                  </div>
+                  <input type="number" id="contact-captcha" required placeholder="Enter the numerical result above"
+                    class="w-full px-4 py-2.5 rounded-xl bg-[#1A0B2E] border border-white/10 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-[#FFCA06] transition-all">
+                  <p id="err-captcha" class="hidden text-[11px] font-mono text-rose-400 flex items-center gap-1.5">
+                    <i class="fa-solid fa-circle-exclamation text-[10px]"></i>
+                    <span>Verification answer is incorrect. Please calculate carefully.</span>
+                  </p>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" id="submit-message-btn" class="btn-connect-neon w-full py-3.5 px-6 rounded-2xl font-bold text-sm tracking-wide flex items-center justify-center gap-2.5 cursor-pointer hover:shadow-[0_0_25px_rgba(255,202,6,0.5)] transition-all">
+                  <i class="fa-solid fa-paper-plane text-xs"></i>
+                  <span>Send Verified Message</span>
+                </button>
+              </form>
+
+              <!-- Success Feedback Box (Initially Hidden) -->
+              <div id="contact-success-box" class="hidden py-8 px-4 text-center space-y-4">
+                <div class="w-16 h-16 mx-auto rounded-2xl bg-emerald-500/20 border border-emerald-500/50 flex items-center justify-center text-emerald-400 shadow-[0_0_20px_rgba(52,211,153,0.4)]">
+                  <i class="fa-solid fa-circle-check text-3xl"></i>
+                </div>
+                <div class="space-y-1">
+                  <h4 class="text-2xl font-bold text-white">Inquiry Verified &amp; Ready to Send!</h4>
+                  <p class="text-xs text-slate-300 font-mono">Your message format has been validated and prepared for Nety Sulistyorini.</p>
+                </div>
+                <div class="p-4 rounded-2xl bg-brand-dark/90 border border-white/10 text-xs font-mono text-slate-300 text-left space-y-1.5 max-w-md mx-auto">
+                  <p><strong class="text-white">From:</strong> <span id="success-from"></span></p>
+                  <p><strong class="text-white">Subject:</strong> <span id="success-subject"></span></p>
+                  <p class="text-emerald-400 pt-1 flex items-center gap-1.5 font-medium">
+                    <i class="fa-solid fa-copy text-[11px]"></i> Message draft has been automatically copied to your clipboard!
+                  </p>
+                </div>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
+                  <a id="success-gmail-link" target="_blank" rel="noopener noreferrer"
+                     class="btn-connect-neon w-full sm:w-auto px-6 py-2.5 rounded-xl text-xs font-bold flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-google text-xs"></i>
+                    <span>Open in Web Gmail</span>
+                  </a>
+                  <a id="success-mailto-link"
+                     class="btn-secondary-glow w-full sm:w-auto px-5 py-2.5 rounded-xl text-xs font-bold flex items-center justify-center gap-2 text-slate-200">
+                    <i class="fa-regular fa-envelope text-xs text-[#FFCA06]"></i>
+                    <span>Launch Mail Client</span>
+                  </a>
+                  <button id="reset-contact-form-btn"
+                          class="w-full sm:w-auto px-4 py-2.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-xs font-mono text-slate-300 hover:text-white transition-all cursor-pointer">
+                    Send Another
+                  </button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER — Elite Professional Layout -->
+  <footer class="relative z-10 border-t border-white/10 bg-[#0F071D]/95 backdrop-blur-2xl" id="site-footer">
+    <div class="w-full h-px bg-gradient-to-r from-transparent via-[#FFCA06]/40 to-transparent"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      
+      <!-- Tier 1: Main Brand, Navigation & Socials in a Structured 3-Column Layout -->
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 pb-10 border-b border-white/10 items-start">
+        
+        <!-- Col 1: Identity & Bio (5 cols) -->
+        <div class="md:col-span-5 space-y-3 text-left">
+          <div class="flex items-center gap-3">
+            <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-[#C91C7A] via-[#68097E] to-[#FFCA06] p-[1.5px] shadow-[0_0_15px_rgba(201,28,122,0.4)] flex-shrink-0">
+              <div class="w-full h-full bg-[#1A0B2E] rounded-[9px] flex items-center justify-center font-mono font-black text-sm text-transparent bg-clip-text bg-gradient-to-r from-[#FFCA06] to-[#C91C7A]">
+                NS
+              </div>
+            </div>
+            <div>
+              <h3 class="font-extrabold text-white text-base tracking-wide leading-tight">Nety Sulistyorini</h3>
+              <p class="text-xs font-mono text-[#FFCA06]">Business &amp; System Analyst Candidate</p>
+            </div>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed max-w-sm">
+            Applied Bachelor (D-IV) student in Information Systems Business at Politeknik Negeri Malang. Bridging enterprise processes with robust IT architecture and data governance.
+          </p>
+        </div>
+
+        <!-- Col 2: Structured Navigation (4 cols) -->
+        <div class="md:col-span-4 space-y-3 text-left">
+          <p class="text-[11px] font-mono font-bold uppercase tracking-widest text-[#FFCA06]">Site Navigation</p>
+          <div class="grid grid-cols-2 gap-x-4 gap-y-2 text-xs font-mono text-slate-400">
+            <a href="#about" class="hover:text-[#FFCA06] transition-colors flex items-center gap-1.5">
+              <i class="fa-solid fa-angle-right text-[10px] text-[#FFCA06]/70"></i><span>About Me</span>
+            </a>
+            <a href="#skills" class="hover:text-[#FFCA06] transition-colors flex items-center gap-1.5">
+              <i class="fa-solid fa-angle-right text-[10px] text-[#FFCA06]/70"></i><span>Skill Set</span>
+            </a>
+            <a href="#projects" class="hover:text-[#FFCA06] transition-colors flex items-center gap-1.5">
+              <i class="fa-solid fa-angle-right text-[10px] text-[#FFCA06]/70"></i><span>Projects</span>
+            </a>
+            <a href="#education" class="hover:text-[#FFCA06] transition-colors flex items-center gap-1.5">
+              <i class="fa-solid fa-angle-right text-[10px] text-[#FFCA06]/70"></i><span>Education</span>
+            </a>
+            <a href="#experience" class="hover:text-[#FFCA06] transition-colors flex items-center gap-1.5">
+              <i class="fa-solid fa-angle-right text-[10px] text-[#FFCA06]/70"></i><span>Experience</span>
+            </a>
+            <a href="#achievements" class="hover:text-[#FFCA06] transition-colors flex items-center gap-1.5">
+              <i class="fa-solid fa-angle-right text-[10px] text-[#FFCA06]/70"></i><span>Awards</span>
+            </a>
+            <a href="#contact" class="hover:text-[#FFCA06] transition-colors flex items-center gap-1.5 col-span-2">
+              <i class="fa-solid fa-angle-right text-[10px] text-[#FFCA06]/70"></i><span>Get in Touch</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 3: Direct Connect & Socials (3 cols) -->
+        <div class="md:col-span-3 space-y-3 text-left">
+          <p class="text-[11px] font-mono font-bold uppercase tracking-widest text-[#FFCA06]">Connect</p>
+          <div class="flex flex-col gap-2">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+               class="px-3.5 py-2 rounded-xl border border-white/10 bg-white/5 hover:border-[#FFCA06]/50 hover:bg-[#FFCA06]/10 text-xs font-mono text-slate-300 hover:text-[#FFCA06] transition-all flex items-center gap-2.5 group">
+              <i class="fa-brands fa-linkedin text-sm text-[#FFCA06]"></i>
+              <span>LinkedIn Profile</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px] ml-auto text-slate-500 group-hover:text-white transition-colors"></i>
+            </a>
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer"
+               class="px-3.5 py-2 rounded-xl border border-white/10 bg-white/5 hover:border-[#C91C7A]/50 hover:bg-[#C91C7A]/10 text-xs font-mono text-slate-300 hover:text-[#C91C7A] transition-all flex items-center gap-2.5 group">
+              <i class="fa-brands fa-github text-sm text-[#C91C7A]"></i>
+              <span>GitHub Repos</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px] ml-auto text-slate-500 group-hover:text-white transition-colors"></i>
+            </a>
+            <a href="mailto:netysulistyorini.edu@gmail.com"
+               class="px-3.5 py-2 rounded-xl border border-white/10 bg-white/5 hover:border-[#FFA726]/50 hover:bg-[#FFA726]/10 text-xs font-mono text-slate-300 hover:text-[#FFA726] transition-all flex items-center gap-2.5 group">
+              <i class="fa-regular fa-envelope text-sm text-[#FFA726]"></i>
+              <span class="truncate">Email Nety</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px] ml-auto text-slate-500 group-hover:text-white transition-colors"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Tier 2: Real-time Status Bar (Clock + Copyright + Back To Top) -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono">
+        
+        <!-- Live Real-Time Clock with Active Indicator -->
+        <div class="flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white/[0.03] border border-white/10 shadow-inner">
+          <span class="flex h-2 w-2 relative">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-400 shadow-[0_0_8px_#34d399]"></span>
+          </span>
+          <i class="fa-regular fa-clock text-[#FFCA06]/90 text-[11px]"></i>
+          <span id="footer-local-time" class="text-slate-300 font-medium">Malang, Indonesia (WIB)</span>
+        </div>
+
+        <!-- Copyright Statement -->
+        <p class="text-slate-500 text-center sm:text-left">
+          &copy; <span id="current-year"></span> Nety Sulistyorini &bull; D-IV SIB POLINEMA
+        </p>
+
+        <!-- Back to Top Button -->
+        <button id="back-to-top"
+          class="group flex items-center gap-2 px-4 py-2 rounded-xl border border-white/10 bg-white/5 hover:border-[#FFCA06]/50 hover:bg-[#FFCA06]/10 text-xs font-mono font-bold text-slate-300 hover:text-[#FFCA06] transition-all cursor-pointer"
+          title="Back to top" aria-label="Back to top">
+          <span>TOP</span>
+          <i class="fa-solid fa-arrow-up text-[11px] group-hover:-translate-y-0.5 transition-transform"></i>
+        </button>
+
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- REUSABLE PROJECT SPEC MODAL WITH GLOWING GLASS MORPHISM -->
+  <div id="project-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-xl hidden opacity-0 transition-opacity duration-300" aria-modal="true" role="dialog">
+    <div class="glass-card relative w-full max-w-2xl rounded-3xl p-6 sm:p-8 text-left transform scale-95 transition-transform duration-300 shadow-2xl" id="modal-box">
+      
+      <!-- Close button -->
+      <button id="close-modal-btn" class="absolute top-5 right-5 w-9 h-9 rounded-xl bg-white/5 border border-white/20 text-slate-300 hover:text-white flex items-center justify-center focus:outline-none hover:bg-white/10 hover:border-[#FFCA06] transition-colors cursor-pointer">
+        <i class="fa-solid fa-xmark text-sm"></i>
+      </button>
+
+      <!-- Dynamic Modal Content Injection Target -->
+      <div id="modal-content" class="space-y-6">
+        <!-- Content inserted dynamically by script.js -->
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FLOATING BACK TO TOP BUTTON -->
+  <button id="floating-back-to-top"
+    class="fixed bottom-6 left-6 z-40 w-11 h-11 rounded-2xl bg-[#260F43]/90 backdrop-blur-xl border border-[#FFCA06]/40 text-[#FFCA06] flex items-center justify-center shadow-[0_0_20px_rgba(255,202,6,0.3)] hover:bg-[#3F194D] hover:border-[#FFCA06] hover:scale-105 transition-all opacity-0 pointer-events-none translate-y-4 cursor-pointer"
+    title="Back to top" aria-label="Back to top">
+    <i class="fa-solid fa-chevron-up text-sm"></i>
+  </button>
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none">
+    <div class="glass-card flex items-center gap-3 px-5 py-3.5 rounded-2xl border-[#FFCA06]/60 shadow-[0_0_30px_rgba(201,28,122,0.4)] text-white text-xs font-mono font-semibold">
+      <i class="fa-solid fa-circle-check text-[#FFCA06] text-base shadow-[0_0_10px_#22d3ee]"></i>
+      <span id="toast-message">Email address copied to clipboard!</span>
+    </div>
+  </div>
+
+  <!-- Main JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>
