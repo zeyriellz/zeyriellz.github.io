@@ -1714,23 +1714,6 @@
                 </div>
               </div>
 
-              <!-- 2. WhatsApp Direct Card -->
-              <a href="https://wa.me/6285733470557" target="_blank" rel="noopener noreferrer" class="glass-card rounded-2xl p-4 flex items-center justify-between group block hover:border-emerald-400 transition-all">
-                <div class="card-spotlight"></div>
-                <div class="flex items-center gap-3.5">
-                  <div class="icon-glow-box w-11 h-11 rounded-xl bg-emerald-500/15 text-emerald-400 flex items-center justify-center border border-emerald-500/40 shadow-[0_0_12px_rgba(52,211,153,0.3)]">
-                    <i class="fa-brands fa-whatsapp text-xl"></i>
-                  </div>
-                  <div>
-                    <span class="text-[11px] font-mono text-emerald-400 uppercase font-semibold">Direct WhatsApp</span>
-                    <div class="text-sm font-bold text-white group-hover:text-emerald-300 transition-colors">
-                      +62 857-3347-0557
-                    </div>
-                  </div>
-                </div>
-                <i class="fa-solid fa-arrow-up-right-from-square text-xs text-slate-400 group-hover:text-emerald-400 transition-colors"></i>
-              </a>
-
               <!-- 3. Email Card -->
               <div class="glass-card rounded-2xl p-4 flex items-center justify-between group">
                 <div class="card-spotlight"></div>
@@ -1999,7 +1982,7 @@
         <!-- Col 2: Structured Navigation (4 cols) -->
         <div class="md:col-span-4 space-y-3 text-left">
           <p class="text-[11px] font-mono font-bold uppercase tracking-widest text-[#FFCA06]">Site Navigation</p>
-          <div class="grid grid-cols-2 gap-x-4 gap-y-2 text-xs font-mono text-slate-400">
+          <div class="grid grid-cols-2 gap-x-4 gap-y-2.5 text-xs font-mono text-slate-400">
             <a href="#about" class="hover:text-[#FFCA06] transition-colors flex items-center gap-1.5">
               <i class="fa-solid fa-angle-right text-[10px] text-[#FFCA06]/70"></i><span>About Me</span>
             </a>
@@ -2018,8 +2001,11 @@
             <a href="#achievements" class="hover:text-[#FFCA06] transition-colors flex items-center gap-1.5">
               <i class="fa-solid fa-angle-right text-[10px] text-[#FFCA06]/70"></i><span>Awards</span>
             </a>
-            <a href="#contact" class="hover:text-[#FFCA06] transition-colors flex items-center gap-1.5 col-span-2">
+            <a href="#contact" class="hover:text-[#FFCA06] transition-colors flex items-center gap-1.5">
               <i class="fa-solid fa-angle-right text-[10px] text-[#FFCA06]/70"></i><span>Get in Touch</span>
+            </a>
+            <a href="/cv" target="_blank" class="hover:text-[#FFCA06] transition-colors flex items-center gap-1.5 text-[#FFCA06] font-semibold">
+              <i class="fa-solid fa-file-pdf text-[10px] text-[#FFCA06]"></i><span>Resume (CV)</span>
             </a>
           </div>
         </div>
@@ -2027,23 +2013,29 @@
         <!-- Col 3: Direct Connect & Socials (3 cols) -->
         <div class="md:col-span-3 space-y-3 text-left">
           <p class="text-[11px] font-mono font-bold uppercase tracking-widest text-[#FFCA06]">Connect</p>
-          <div class="flex flex-col gap-2">
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 gap-2">
             <a href="https://linkedin.com/in/nety-sulistyorini" target="_blank" rel="noopener noreferrer"
                class="px-3.5 py-2 rounded-xl border border-white/10 bg-white/5 hover:border-[#FFCA06]/50 hover:bg-[#FFCA06]/10 text-xs font-mono text-slate-300 hover:text-[#FFCA06] transition-all flex items-center gap-2.5 group">
               <i class="fa-brands fa-linkedin text-sm text-[#FFCA06]"></i>
-              <span>LinkedIn Profile</span>
+              <span class="truncate">LinkedIn</span>
               <i class="fa-solid fa-arrow-up-right-from-square text-[10px] ml-auto text-slate-500 group-hover:text-white transition-colors"></i>
             </a>
             <a href="https://github.com/zeyriellz" target="_blank" rel="noopener noreferrer"
                class="px-3.5 py-2 rounded-xl border border-white/10 bg-white/5 hover:border-[#C91C7A]/50 hover:bg-[#C91C7A]/10 text-xs font-mono text-slate-300 hover:text-[#C91C7A] transition-all flex items-center gap-2.5 group">
               <i class="fa-brands fa-github text-sm text-[#C91C7A]"></i>
-              <span>GitHub Repos</span>
+              <span class="truncate">GitHub</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px] ml-auto text-slate-500 group-hover:text-white transition-colors"></i>
+            </a>
+            <a href="https://www.instagram.com/zeyriellz?cplk=MWdveHo4ZGVxdzdpNw==" target="_blank" rel="noopener noreferrer"
+               class="px-3.5 py-2 rounded-xl border border-white/10 bg-white/5 hover:border-[#E1306C]/50 hover:bg-[#E1306C]/10 text-xs font-mono text-slate-300 hover:text-[#E1306C] transition-all flex items-center gap-2.5 group">
+              <i class="fa-brands fa-instagram text-sm text-[#E1306C]"></i>
+              <span class="truncate">Instagram</span>
               <i class="fa-solid fa-arrow-up-right-from-square text-[10px] ml-auto text-slate-500 group-hover:text-white transition-colors"></i>
             </a>
             <a href="mailto:netysulistyorini.edu@gmail.com"
                class="px-3.5 py-2 rounded-xl border border-white/10 bg-white/5 hover:border-[#FFA726]/50 hover:bg-[#FFA726]/10 text-xs font-mono text-slate-300 hover:text-[#FFA726] transition-all flex items-center gap-2.5 group">
               <i class="fa-regular fa-envelope text-sm text-[#FFA726]"></i>
-              <span class="truncate">Email Nety</span>
+              <span class="truncate">Email</span>
               <i class="fa-solid fa-arrow-up-right-from-square text-[10px] ml-auto text-slate-500 group-hover:text-white transition-colors"></i>
             </a>
           </div>
