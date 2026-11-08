@@ -1,67 +1,56 @@
 /* ==========================================================================
    Nety Sulistyorini Portfolio - Blueberry Palette Design System
-   Exact Swatch Palette:
-   - BLUEBERRY SKIN: #2F3A55 (RGB 47, 58, 85)   - Primary Dark Text, Monogram, Hero Headline
-   - BERRY BLOOM:    #5C6B8A (RGB 92, 107, 138)  - Primary Buttons, Active Accents, Brand Highlights
-   - STEM GREY:      #6E6F73 (RGB 110, 111, 115) - Secondary Text, Descriptions, Subtitles
-   - YOGURT TINT:    #E7E2DE (RGB 231, 226, 222) - Soft Surface, Tags, Code Containers, Borders
-   - PLATE WHITE:    #F5F6F3 (RGB 245, 246, 243) - Light Mode Page Background Canvas
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
    1. CSS Variables - Light Mode (Default)
    -------------------------------------------------------------------------- */
 :root {
-  /* Direct Swatch Tokens */
   --swatch-blueberry-skin: #2F3A55;
   --swatch-berry-bloom:    #5C6B8A;
   --swatch-stem-grey:      #6E6F73;
   --swatch-yogurt-tint:    #E7E2DE;
   --swatch-plate-white:    #F5F6F3;
 
-  /* Semantic Theme Variables */
-  --bg-page:              #F5F6F3; /* Plate White */
-  --bg-card:              #FFFFFF; /* Pure White Elevation */
+  --bg-page:              #F5F6F3;
+  --bg-card:              #FFFFFF;
   --bg-card-subtle:       #FAF9F7;
-  --bg-surface:           #E7E2DE; /* Yogurt Tint */
+  --bg-surface:           #E7E2DE;
   --bg-surface-soft:      rgba(231, 226, 222, 0.45);
   --bg-nav:               rgba(245, 246, 243, 0.94);
   --bg-modal:             #FFFFFF;
   --bg-input:             #FFFFFF;
 
   --border-card:          #E5E7EB;
-  --border-subtle:        #E7E2DE; /* Yogurt Tint Border */
+  --border-subtle:        #E7E2DE;
   --border-input:         #D1D5DB;
 
-  --text-main:            #2F3A55; /* Blueberry Skin */
-  --text-secondary:       #6E6F73; /* Stem Grey */
+  --text-main:            #2F3A55;
+  --text-secondary:       #6E6F73;
   --text-muted:           #8C8D91;
 
-  --accent-berry:         #5C6B8A; /* Berry Bloom */
+  --accent-berry:         #5C6B8A;
   --accent-berry-hover:   #485570;
   --accent-berry-active:  #3B465E;
   --accent-berry-light:   rgba(92, 107, 138, 0.09);
   --accent-berry-border:  rgba(92, 107, 138, 0.28);
 
-  --accent-yogurt:        #E7E2DE; /* Yogurt Tint */
+  --accent-yogurt:        #E7E2DE;
   --accent-yogurt-border: #D8D2CD;
-
-  --badge-bg:             #E7E2DE;
-  --badge-text:           #2F3A55;
 
   --card-shadow:          0 1px 3px 0 rgba(47, 58, 85, 0.04), 0 6px 16px -2px rgba(47, 58, 85, 0.06);
   --card-shadow-hover:    0 12px 28px -4px rgba(47, 58, 85, 0.12), 0 4px 10px -2px rgba(47, 58, 85, 0.06);
 
-  --code-bg:              #E7E2DE; /* Yogurt Tint Code Background */
-  --code-text:            #2F3A55; /* Blueberry Skin Code Text */
+  --code-bg:              #E7E2DE;
+  --code-text:            #2F3A55;
 }
 
 /* --------------------------------------------------------------------------
    2. CSS Variables - Dark Mode
    -------------------------------------------------------------------------- */
 [data-theme="dark"] {
-  --bg-page:              #1A202C; /* Deep Slate Charcoal */
-  --bg-card:              #2D3748; /* Slate Dark Card */
+  --bg-page:              #1A202C;
+  --bg-card:              #2D3748;
   --bg-card-subtle:       #242C3C;
   --bg-surface:           #242C3C;
   --bg-surface-soft:      rgba(45, 55, 72, 0.65);
@@ -73,11 +62,11 @@
   --border-subtle:        #374151;
   --border-input:         #4B5563;
 
-  --text-main:            #F5F6F3; /* Plate White */
+  --text-main:            #F5F6F3;
   --text-secondary:       #A0AEC0;
   --text-muted:           #718096;
 
-  --accent-berry:         #5C6B8A; /* Berry Bloom */
+  --accent-berry:         #5C6B8A;
   --accent-berry-hover:   #7182A4;
   --accent-berry-active:  #8294B8;
   --accent-berry-light:   rgba(92, 107, 138, 0.22);
@@ -85,9 +74,6 @@
 
   --accent-yogurt:        #E7E2DE;
   --accent-yogurt-border: #4B5563;
-
-  --badge-bg:             #242C3C;
-  --badge-text:           #F5F6F3;
 
   --card-shadow:          0 4px 20px -2px rgba(0, 0, 0, 0.35);
   --card-shadow-hover:    0 14px 32px -4px rgba(0, 0, 0, 0.55);
@@ -136,21 +122,10 @@ p, span, li, label {
   color: var(--text-secondary);
 }
 
-.text-main {
-  color: var(--text-main) !important;
-}
-
-.text-secondary {
-  color: var(--text-secondary) !important;
-}
-
-.text-berry {
-  color: var(--accent-berry) !important;
-}
-
-.text-yogurt {
-  color: var(--accent-yogurt) !important;
-}
+.text-main { color: var(--text-main) !important; }
+.text-secondary { color: var(--text-secondary) !important; }
+.text-berry { color: var(--accent-berry) !important; }
+.text-yogurt { color: var(--accent-yogurt) !important; }
 
 /* High-End Clean Hero Title */
 .hero-name-gradient {
@@ -233,7 +208,7 @@ p, span, li, label {
 }
 
 /* --------------------------------------------------------------------------
-   5. Buttons & Controls (Berry Bloom #5C6B8A)
+   5. Buttons & Controls (FIXED CONTRAST COLORS)
    -------------------------------------------------------------------------- */
 .btn-connect-neon,
 .btn-primary-berry {
@@ -241,14 +216,14 @@ p, span, li, label {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  background-color: var(--accent-berry);
+  background-color: var(--swatch-blueberry-skin); /* #2F3A55 - Gelap agar teks putih terlihat */
   color: #FFFFFF !important;
   font-weight: 700;
   font-size: 0.875rem;
   padding: 0.75rem 1.35rem;
   border-radius: 0.875rem;
-  border: 1px solid var(--accent-berry);
-  box-shadow: 0 2px 6px -1px rgba(92, 107, 138, 0.35);
+  border: 1px solid var(--swatch-blueberry-skin);
+  box-shadow: 0 2px 6px -1px rgba(47, 58, 85, 0.35);
   cursor: pointer;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   text-decoration: none;
@@ -256,10 +231,10 @@ p, span, li, label {
 
 .btn-connect-neon:hover,
 .btn-primary-berry:hover {
-  background-color: var(--accent-berry-hover);
+  background-color: var(--accent-berry-hover); /* Sedikit lebih terang saat di-hover */
   border-color: var(--accent-berry-hover);
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px -2px rgba(92, 107, 138, 0.45);
+  box-shadow: 0 6px 16px -2px rgba(47, 58, 85, 0.45);
 }
 
 .btn-connect-neon:active,
@@ -375,7 +350,7 @@ p, span, li, label {
 }
 
 /* --------------------------------------------------------------------------
-   7. Card Scroll Reveal Animation (Intersection Observer)
+   7. Card Scroll Reveal Animation
    -------------------------------------------------------------------------- */
 .card-reveal,
 .reveal-up {
@@ -434,7 +409,7 @@ p, span, li, label {
 }
 
 /* --------------------------------------------------------------------------
-  10. Project Filters & Tech Tags (Yogurt Tint Swatch Integration)
+  10. Project Filters & Tech Tags
    -------------------------------------------------------------------------- */
 .project-filter-btn {
   padding: 0.5rem 1rem;
@@ -454,10 +429,10 @@ p, span, li, label {
 }
 
 .project-filter-btn.active {
-  background-color: var(--accent-berry);
+  background-color: var(--swatch-blueberry-skin);
   color: #FFFFFF !important;
-  border-color: var(--accent-berry);
-  box-shadow: 0 2px 8px -1px rgba(92, 107, 138, 0.35);
+  border-color: var(--swatch-blueberry-skin);
+  box-shadow: 0 2px 8px -1px rgba(47, 58, 85, 0.35);
 }
 
 .tech-tag {
