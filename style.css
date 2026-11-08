@@ -1,719 +1,591 @@
 /* ==========================================================================
-   Nety Sulistyorini Portfolio - Synthwave / Cyberpunk High-Tech Theme
-   Color Palette:
-   - Background: #1A0B2E (Deep Midnight Purple)
-   - Cards: #3F194D (Dark Purple with 60% Glassmorphism)
-   - Primary Accents: #C91C7A (Neon Magenta) & #FFCA06 (Neon Yellow / Cyber Gold)
-   - Secondary Accents: #68097E (Bright Purple)
+   Nety Sulistyorini Portfolio - Blueberry Palette Design System
+   Exact Swatch Palette:
+   - BLUEBERRY SKIN: #2F3A55 (RGB 47, 58, 85)   - Primary Dark Text, Monogram, Hero Headline
+   - BERRY BLOOM:    #5C6B8A (RGB 92, 107, 138)  - Primary Buttons, Active Accents, Brand Highlights
+   - STEM GREY:      #6E6F73 (RGB 110, 111, 115) - Secondary Text, Descriptions, Subtitles
+   - YOGURT TINT:    #E7E2DE (RGB 231, 226, 222) - Soft Surface, Tags, Code Containers, Borders
+   - PLATE WHITE:    #F5F6F3 (RGB 245, 246, 243) - Light Mode Page Background Canvas
    ========================================================================== */
 
+/* --------------------------------------------------------------------------
+   1. CSS Variables - Light Mode (Default)
+   -------------------------------------------------------------------------- */
 :root {
-  --color-bg-dark: #1A0B2E;
-  --color-card-bg: rgba(63, 25, 77, 0.6);
-  --color-card-solid: #3F194D;
-  --color-magenta: #C91C7A;
-  --color-neon-yellow: #FFCA06;
-  --color-purple-bright: #68097E;
-  --color-subtext: #D8B4E2;
+  /* Direct Swatch Tokens */
+  --swatch-blueberry-skin: #2F3A55;
+  --swatch-berry-bloom:    #5C6B8A;
+  --swatch-stem-grey:      #6E6F73;
+  --swatch-yogurt-tint:    #E7E2DE;
+  --swatch-plate-white:    #F5F6F3;
+
+  /* Semantic Theme Variables */
+  --bg-page:              #F5F6F3; /* Plate White */
+  --bg-card:              #FFFFFF; /* Pure White Elevation */
+  --bg-card-subtle:       #FAF9F7;
+  --bg-surface:           #E7E2DE; /* Yogurt Tint */
+  --bg-surface-soft:      rgba(231, 226, 222, 0.45);
+  --bg-nav:               rgba(245, 246, 243, 0.94);
+  --bg-modal:             #FFFFFF;
+  --bg-input:             #FFFFFF;
+
+  --border-card:          #E5E7EB;
+  --border-subtle:        #E7E2DE; /* Yogurt Tint Border */
+  --border-input:         #D1D5DB;
+
+  --text-main:            #2F3A55; /* Blueberry Skin */
+  --text-secondary:       #6E6F73; /* Stem Grey */
+  --text-muted:           #8C8D91;
+
+  --accent-berry:         #5C6B8A; /* Berry Bloom */
+  --accent-berry-hover:   #485570;
+  --accent-berry-active:  #3B465E;
+  --accent-berry-light:   rgba(92, 107, 138, 0.09);
+  --accent-berry-border:  rgba(92, 107, 138, 0.28);
+
+  --accent-yogurt:        #E7E2DE; /* Yogurt Tint */
+  --accent-yogurt-border: #D8D2CD;
+
+  --badge-bg:             #E7E2DE;
+  --badge-text:           #2F3A55;
+
+  --card-shadow:          0 1px 3px 0 rgba(47, 58, 85, 0.04), 0 6px 16px -2px rgba(47, 58, 85, 0.06);
+  --card-shadow-hover:    0 12px 28px -4px rgba(47, 58, 85, 0.12), 0 4px 10px -2px rgba(47, 58, 85, 0.06);
+
+  --code-bg:              #E7E2DE; /* Yogurt Tint Code Background */
+  --code-text:            #2F3A55; /* Blueberry Skin Code Text */
 }
 
 /* --------------------------------------------------------------------------
-   1. Multi-Layered Synthwave Mesh Gradient Backgrounds
+   2. CSS Variables - Dark Mode
    -------------------------------------------------------------------------- */
-.mesh-gradient-container {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-  overflow: hidden;
-  background-color: #1A0B2E;
-}
+[data-theme="dark"] {
+  --bg-page:              #1A202C; /* Deep Slate Charcoal */
+  --bg-card:              #2D3748; /* Slate Dark Card */
+  --bg-card-subtle:       #242C3C;
+  --bg-surface:           #242C3C;
+  --bg-surface-soft:      rgba(45, 55, 72, 0.65);
+  --bg-nav:               rgba(26, 32, 44, 0.94);
+  --bg-modal:             #2D3748;
+  --bg-input:             #1F2733;
 
-/* Cyberpunk Matrix Ambient Grid */
-.bg-grid-cyber {
-  position: absolute;
-  inset: 0;
-  background-size: 45px 45px;
-  background-image: 
-    linear-gradient(to right, rgba(201, 28, 122, 0.08) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 202, 6, 0.05) 1px, transparent 1px);
-  mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.35) 70%, transparent 100%);
-  -webkit-mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.35) 70%, transparent 100%);
-}
+  --border-card:          #3D4A60;
+  --border-subtle:        #374151;
+  --border-input:         #4B5563;
 
-/* Glowing Synthwave Mesh Orbs with Parallax */
-.parallax-orb {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  will-change: transform;
-}
+  --text-main:            #F5F6F3; /* Plate White */
+  --text-secondary:       #A0AEC0;
+  --text-muted:           #718096;
 
-.mesh-orb {
-  position: absolute;
-  border-radius: 9999px;
-  filter: blur(140px);
-  pointer-events: none;
-  opacity: 0.6;
-  mix-blend-mode: screen;
-  will-change: transform, opacity;
-}
+  --accent-berry:         #5C6B8A; /* Berry Bloom */
+  --accent-berry-hover:   #7182A4;
+  --accent-berry-active:  #8294B8;
+  --accent-berry-light:   rgba(92, 107, 138, 0.22);
+  --accent-berry-border:  rgba(92, 107, 138, 0.45);
 
-/* Orb 1: Top-Left Neon Magenta radiating into Deep Purple */
-.mesh-orb-1 {
-  width: 650px;
-  height: 650px;
-  top: -120px;
-  left: -120px;
-  background: radial-gradient(circle, #C91C7A 0%, #68097E 45%, rgba(63, 25, 77, 0) 70%);
-  animation: orbDrift1 18s ease-in-out infinite alternate;
-}
+  --accent-yogurt:        #E7E2DE;
+  --accent-yogurt-border: #4B5563;
 
-/* Orb 2: Top-Right Neon Yellow/Cyber Gold with Magenta rim */
-.mesh-orb-2 {
-  width: 700px;
-  height: 700px;
-  top: 10%;
-  right: -180px;
-  background: radial-gradient(circle, rgba(255, 202, 6, 0.55) 0%, #C91C7A 40%, rgba(104, 9, 126, 0) 70%);
-  animation: orbDrift2 22s ease-in-out infinite alternate;
-}
+  --badge-bg:             #242C3C;
+  --badge-text:           #F5F6F3;
 
-/* Orb 3: Mid-Left Rich Purple into Magenta */
-.mesh-orb-3 {
-  width: 620px;
-  height: 620px;
-  top: 55%;
-  left: -100px;
-  background: radial-gradient(circle, #68097E 0%, #3F194D 50%, rgba(26, 11, 46, 0) 70%);
-  animation: orbDrift3 20s ease-in-out infinite alternate;
-}
+  --card-shadow:          0 4px 20px -2px rgba(0, 0, 0, 0.35);
+  --card-shadow-hover:    0 14px 32px -4px rgba(0, 0, 0, 0.55);
 
-/* Orb 4: Bottom-Right Vivid Magenta & Gold */
-.mesh-orb-4 {
-  width: 720px;
-  height: 720px;
-  bottom: -120px;
-  right: 5%;
-  background: radial-gradient(circle, #C91C7A 0%, #FFCA06 35%, rgba(104, 9, 126, 0) 70%);
-  opacity: 0.5;
-  animation: orbDrift4 24s ease-in-out infinite alternate;
-}
-
-/* Orb Center: Atmospheric Deep Glow */
-.mesh-orb-center {
-  width: 550px;
-  height: 550px;
-  top: 40%;
-  left: 45%;
-  transform: translate(-50%, -50%);
-  background: radial-gradient(circle, #68097E 0%, #3F194D 45%, rgba(26, 11, 46, 0) 75%);
-  opacity: 0.4;
-  animation: orbPulse 10s ease-in-out infinite alternate;
-}
-
-/* Interactive Cursor Glow (Magenta & Neon Yellow) */
-#cursor-glow {
-  position: fixed;
-  width: 500px;
-  height: 500px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(201, 28, 122, 0.14) 0%, rgba(255, 202, 6, 0.08) 40%, transparent 70%);
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-  transition: transform 0.1s ease-out, opacity 0.3s ease;
-  will-change: transform, left, top;
+  --code-bg:              #1F2733;
+  --code-text:            #F5F6F3;
 }
 
 /* --------------------------------------------------------------------------
-   2. Typography: Shimmering Magenta to Neon Yellow Text Gradient
+   3. Global Reset & Typography
    -------------------------------------------------------------------------- */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--bg-page);
+  color: var(--text-main);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body {
+  background-color: var(--bg-page);
+  color: var(--text-main);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: var(--accent-berry);
+  color: #FFFFFF;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-main);
+  letter-spacing: -0.02em;
+}
+
+p, span, li, label {
+  color: var(--text-secondary);
+}
+
+.text-main {
+  color: var(--text-main) !important;
+}
+
+.text-secondary {
+  color: var(--text-secondary) !important;
+}
+
+.text-berry {
+  color: var(--accent-berry) !important;
+}
+
+.text-yogurt {
+  color: var(--accent-yogurt) !important;
+}
+
+/* High-End Clean Hero Title */
 .hero-name-gradient {
-  background: linear-gradient(135deg, #FFCA06 0%, #FFA726 20%, #C91C7A 60%, #FFCA06 100%);
-  background-size: 250% auto;
+  background: linear-gradient(135deg, var(--text-main) 0%, var(--accent-berry) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0 0 25px rgba(201, 28, 122, 0.65)) drop-shadow(0 0 45px rgba(255, 202, 6, 0.35));
-  animation: textShimmer 7s linear infinite;
+  display: inline-block;
 }
 
-.text-glow-yellow {
-  text-shadow: 0 0 15px rgba(255, 202, 6, 0.6), 0 0 30px rgba(255, 202, 6, 0.3);
-}
-
-.text-glow-magenta {
-  text-shadow: 0 0 15px rgba(201, 28, 122, 0.65), 0 0 30px rgba(201, 28, 122, 0.35);
-}
-
-/* --------------------------------------------------------------------------
-   3. Cyberpunk Glassmorphism Cards: #3F194D (60% Opacity) & Glowing Borders
-   -------------------------------------------------------------------------- */
-.glass-card {
-  position: relative;
-  background: rgba(63, 25, 77, 0.6);
-  backdrop-filter: blur(20px) saturate(190%);
-  -webkit-backdrop-filter: blur(20px) saturate(190%);
-  border: 1px solid rgba(255, 202, 6, 0.22);
-  box-shadow: 
-    0 10px 30px -10px rgba(26, 11, 46, 0.7),
-    0 0 20px -5px rgba(201, 28, 122, 0.18),
-    inset 0 1px 1px 0 rgba(255, 255, 255, 0.12);
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.glass-card::before {
-  content: '';
-  position: absolute;
-  inset: -1px;
-  border-radius: inherit;
-  padding: 1px;
-  background: linear-gradient(135deg, rgba(255, 202, 6, 0.35), rgba(201, 28, 122, 0.3) 50%, rgba(104, 9, 126, 0.2) 100%);
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  pointer-events: none;
-  opacity: 0.65;
-  transition: opacity 0.4s ease, background 0.4s ease;
-}
-
-/* Card Hover State: Lift, Neon Yellow & Magenta Luminous Aura */
-.glass-card:hover {
-  transform: translateY(-8px) scale(1.012);
-  border-color: #FFCA06;
-  box-shadow: 
-    0 25px 50px -12px rgba(26, 11, 46, 0.9),
-    0 0 30px 2px rgba(255, 202, 6, 0.4),
-    0 0 55px 0 rgba(201, 28, 122, 0.35),
-    inset 0 1px 2px 0 rgba(255, 255, 255, 0.25);
-}
-
-.glass-card:hover::before {
-  opacity: 1;
-  background: linear-gradient(135deg, #FFCA06, #C91C7A 60%, #68097E);
-}
-
-/* Card Interactive Mouse Spotlight Reflection (Magenta/Yellow) */
-.glass-card .card-spotlight {
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  background: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255, 202, 6, 0.12), rgba(201, 28, 122, 0.08) 35%, transparent 60%);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.glass-card:hover .card-spotlight {
-  opacity: 1;
-}
-
-/* Magenta Card Variant */
-.glass-card-magenta {
-  border-color: rgba(201, 28, 122, 0.3);
-  box-shadow: 0 10px 30px -10px rgba(26, 11, 46, 0.7), 0 0 20px -5px rgba(201, 28, 122, 0.2);
-}
-.glass-card-magenta:hover {
-  border-color: #C91C7A;
-  box-shadow: 
-    0 25px 50px -12px rgba(26, 11, 46, 0.9),
-    0 0 35px 2px rgba(201, 28, 122, 0.5),
-    0 0 60px 0 rgba(255, 202, 6, 0.35);
-}
-
-/* Yellow/Gold Card Variant */
-.glass-card-yellow {
-  border-color: rgba(255, 202, 6, 0.3);
-  box-shadow: 0 10px 30px -10px rgba(26, 11, 46, 0.7), 0 0 20px -5px rgba(255, 202, 6, 0.2);
-}
-.glass-card-yellow:hover {
-  border-color: #FFCA06;
-  box-shadow: 
-    0 25px 50px -12px rgba(26, 11, 46, 0.9),
-    0 0 35px 2px rgba(255, 202, 6, 0.5),
-    0 0 60px 0 rgba(201, 28, 122, 0.35);
-}
-
-/* --------------------------------------------------------------------------
-   4. High-Impact Synthwave Buttons: Magenta to Purple with Neon Yellow Glow
-   -------------------------------------------------------------------------- */
-/* Main CTA Button: Magenta (#C91C7A) to Purple (#68097E) with subtle #FFCA06 Glow */
-.btn-connect-neon {
-  position: relative;
-  background: linear-gradient(135deg, #C91C7A 0%, #A01469 40%, #68097E 100%);
-  background-size: 200% 200%;
-  color: #ffffff;
+/* Section Subheading Tag Pill */
+.section-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
   font-weight: 700;
-  border: 1px solid rgba(255, 202, 6, 0.45);
-  box-shadow: 
-    0 0 20px rgba(201, 28, 122, 0.55),
-    0 0 35px rgba(255, 202, 6, 0.3),
-    inset 0 1px 1px rgba(255, 255, 255, 0.4);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-main);
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+}
+
+[data-theme="dark"] .section-tag {
+  background: var(--accent-berry-light);
+  border-color: var(--accent-berry-border);
+  color: var(--accent-berry);
+}
+
+/* --------------------------------------------------------------------------
+   4. Clean Flat Cards
+   -------------------------------------------------------------------------- */
+.glass-card,
+.stat-card-shine,
+.card-flat {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: 1.25rem;
+  box-shadow: var(--card-shadow);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), 
+              box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), 
+              border-color 0.35s ease,
+              background-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-card:hover,
+.card-flat:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent-berry);
+  box-shadow: var(--card-shadow-hover);
+}
+
+/* Terminal Profile Card */
+.terminal-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: 1.5rem;
+  box-shadow: var(--card-shadow);
   transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-  animation: gradientShift 6s ease infinite;
 }
 
-.btn-connect-neon:hover {
-  transform: translateY(-2px) scale(1.04);
-  border-color: #FFCA06;
-  box-shadow: 
-    0 0 30px rgba(201, 28, 122, 0.8),
-    0 0 50px rgba(255, 202, 6, 0.65),
-    0 0 75px rgba(201, 28, 122, 0.4),
-    inset 0 1px 2px rgba(255, 255, 255, 0.6);
+.terminal-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--card-shadow-hover);
+  border-color: var(--accent-berry);
 }
 
-.btn-connect-neon:active {
-  transform: translateY(0) scale(0.98);
+.terminal-code-box {
+  background-color: var(--code-bg);
+  color: var(--code-text);
+  border: 1px solid var(--border-subtle);
+  border-radius: 0.875rem;
+  font-family: 'JetBrains Mono', monospace;
 }
 
-/* Secondary Button with Glowing Border */
-.btn-secondary-glow {
-  position: relative;
-  background: rgba(63, 25, 77, 0.75);
-  backdrop-filter: blur(14px);
-  border: 1px solid rgba(255, 202, 6, 0.3);
-  color: #F8FAFC;
-  box-shadow: 0 0 15px rgba(201, 28, 122, 0.2);
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+/* --------------------------------------------------------------------------
+   5. Buttons & Controls (Berry Bloom #5C6B8A)
+   -------------------------------------------------------------------------- */
+.btn-connect-neon,
+.btn-primary-berry {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: var(--accent-berry);
+  color: #FFFFFF !important;
+  font-weight: 700;
+  font-size: 0.875rem;
+  padding: 0.75rem 1.35rem;
+  border-radius: 0.875rem;
+  border: 1px solid var(--accent-berry);
+  box-shadow: 0 2px 6px -1px rgba(92, 107, 138, 0.35);
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
 }
 
-.btn-secondary-glow:hover {
+.btn-connect-neon:hover,
+.btn-primary-berry:hover {
+  background-color: var(--accent-berry-hover);
+  border-color: var(--accent-berry-hover);
   transform: translateY(-2px);
-  background: rgba(85, 34, 105, 0.9);
-  border-color: #FFCA06;
-  color: #ffffff;
-  box-shadow: 0 0 25px rgba(255, 202, 6, 0.4), 0 0 45px rgba(201, 28, 122, 0.3);
+  box-shadow: 0 6px 16px -2px rgba(92, 107, 138, 0.45);
 }
 
-/* Floating Status Pill */
-.glow-badge-status {
-  background: rgba(63, 25, 77, 0.75);
-  border: 1px solid rgba(255, 202, 6, 0.4);
-  box-shadow: 0 0 20px -3px rgba(255, 202, 6, 0.3);
-  backdrop-filter: blur(14px);
+.btn-connect-neon:active,
+.btn-primary-berry:active {
+  transform: translateY(0);
 }
 
-/* Glowing Icon Boxes */
-.icon-glow-box {
-  position: relative;
+.btn-secondary-glow,
+.btn-outline-berry {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: var(--bg-card);
+  color: var(--text-main) !important;
+  font-weight: 600;
+  font-size: 0.875rem;
+  padding: 0.75rem 1.35rem;
+  border-radius: 0.875rem;
+  border: 1px solid var(--border-card);
+  box-shadow: var(--card-shadow);
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+}
+
+.btn-secondary-glow:hover,
+.btn-outline-berry:hover {
+  border-color: var(--accent-berry);
+  color: var(--accent-berry) !important;
+  transform: translateY(-2px);
+  box-shadow: var(--card-shadow-hover);
+}
+
+/* Header & Switcher Controls */
+.toggle-control-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.25rem;
+  padding: 0 0.75rem;
+  border-radius: 0.625rem;
+  font-size: 0.75rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 600;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-main);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.toggle-control-btn:hover {
+  border-color: var(--accent-berry);
+  color: var(--accent-berry);
+  background-color: var(--bg-surface-soft);
+}
+
+.toggle-icon-btn {
+  width: 2.25rem;
+  padding: 0;
+}
+
+/* --------------------------------------------------------------------------
+   6. Navigation Bar
+   -------------------------------------------------------------------------- */
+.nav-main-bar {
+  background-color: var(--bg-nav);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border-subtle);
   transition: all 0.3s ease;
 }
 
-.icon-glow-box::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  background: inherit;
-  filter: blur(14px);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  z-index: -1;
-}
-
-.glass-card:hover .icon-glow-box {
-  transform: scale(1.12);
-}
-
-.glass-card:hover .icon-glow-box::after {
-  opacity: 0.85;
-}
-
-/* --------------------------------------------------------------------------
-   5. Interactive Navigation Bar, Scroll Progress, Ticker & HUD Elements
-   -------------------------------------------------------------------------- */
-
-/* ── Announcement Ticker ── */
-.ticker-track {
-  display: flex;
-  animation: tickerScroll 38s linear infinite;
-}
-
-.ticker-track:hover {
-  animation-play-state: paused;
-}
-
-@keyframes tickerScroll {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
-/* ── Main nav bar base ── */
-.nav-main-bar {
-  position: relative;
-  background: rgba(18, 8, 32, 0.6);
-  backdrop-filter: blur(16px) saturate(160%);
-  -webkit-backdrop-filter: blur(16px) saturate(160%);
-  border-bottom: 1px solid rgba(255, 202, 6, 0.1);
-  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
 #navbar.scrolled .nav-main-bar {
-  background: rgba(12, 5, 22, 0.97) !important;
-  backdrop-filter: blur(28px) saturate(200%) !important;
-  -webkit-backdrop-filter: blur(28px) saturate(200%) !important;
-  border-bottom-color: rgba(255, 202, 6, 0.22) !important;
-  box-shadow: 0 8px 32px -4px rgba(0, 0, 0, 0.8), 0 0 20px -4px rgba(201, 28, 122, 0.25) !important;
+  box-shadow: 0 4px 20px -2px rgba(47, 58, 85, 0.08);
 }
 
-/* ── Scroll Progress Bar ── */
+.nav-link {
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 0.4rem 0.85rem;
+  border-radius: 9999px;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: var(--text-main);
+  background-color: var(--accent-berry-light);
+}
+
+.nav-link.active {
+  color: var(--accent-berry) !important;
+  background-color: var(--accent-berry-light) !important;
+  font-weight: 700;
+}
+
 #scroll-progress-bar {
   position: absolute;
   bottom: 0;
   left: 0;
   height: 2px;
   width: 0%;
-  background: linear-gradient(90deg, #C91C7A 0%, #FFCA06 50%, #68097E 100%);
-  box-shadow: 0 0 8px #FFCA06, 0 0 16px rgba(201, 28, 122, 0.7);
+  background-color: var(--accent-berry);
   transition: width 0.08s linear;
-  z-index: 10;
-}
-
-/* ── Nav link hover / active ── */
-.nav-link {
-  position: relative;
-  transition: all 0.2s ease;
-}
-
-.nav-link:hover {
-  color: #FFCA06;
-  background: rgba(255, 202, 6, 0.08);
-}
-
-.nav-link.active {
-  color: #FFCA06 !important;
-  background: rgba(201, 28, 122, 0.2);
-  border: 1px solid rgba(255, 202, 6, 0.45);
-  box-shadow: 0 0 14px rgba(255, 202, 6, 0.3), inset 0 0 6px rgba(201, 28, 122, 0.2);
-}
-
-/* ── Social pill buttons in nav ── */
-.nav-social-pill {
-  transition: all 0.2s ease;
-}
-
-/* ── Footer nav links ── */
-.footer-nav-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  color: #94a3b8;
-  transition: all 0.2s ease;
-}
-
-.footer-nav-link:hover {
-  color: #FFCA06;
-  transform: translateX(4px);
-}
-
-.footer-nav-link:hover .footer-arrow {
-  color: #C91C7A;
-}
-
-/* ── Footer social pills ── */
-.footer-social-pill {
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.footer-social-pill:hover {
-  transform: translateY(-2px);
-}
-
-/* ── Project filter ── */
-.project-filter-btn.active {
-  background: linear-gradient(135deg, rgba(201, 28, 122, 0.35), rgba(104, 9, 126, 0.45));
-  color: #FFCA06;
-  border: 1px solid rgba(255, 202, 6, 0.6);
-  box-shadow: 0 0 20px rgba(255, 202, 6, 0.4);
+  z-index: 50;
 }
 
 /* --------------------------------------------------------------------------
-   6. Custom Synthwave Scrollbar
+   7. Card Scroll Reveal Animation (Intersection Observer)
    -------------------------------------------------------------------------- */
-::-webkit-scrollbar {
-  width: 9px;
-}
-
-::-webkit-scrollbar-track {
-  background: #1A0B2E;
-}
-
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #C91C7A 0%, #68097E 50%, #FFCA06 100%);
-  border-radius: 9999px;
-  border: 2px solid #1A0B2E;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #FFCA06 0%, #C91C7A 100%);
-  box-shadow: 0 0 18px rgba(255, 202, 6, 0.8);
-}
-
-/* --------------------------------------------------------------------------
-   7. Keyframe Animations
-   -------------------------------------------------------------------------- */
-@keyframes textShimmer {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-@keyframes gradientShift {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-@keyframes orbDrift1 {
-  0% {
-    transform: translate(0px, 0px) scale(1);
-  }
-  50% {
-    transform: translate(70px, 50px) scale(1.1);
-  }
-  100% {
-    transform: translate(-30px, 80px) scale(0.95);
-  }
-}
-
-@keyframes orbDrift2 {
-  0% {
-    transform: translate(0px, 0px) scale(1);
-  }
-  50% {
-    transform: translate(-80px, 60px) scale(1.12);
-  }
-  100% {
-    transform: translate(-50px, -50px) scale(0.9);
-  }
-}
-
-@keyframes orbDrift3 {
-  0% {
-    transform: translate(0px, 0px) scale(0.95);
-  }
-  50% {
-    transform: translate(60px, -70px) scale(1.1);
-  }
-  100% {
-    transform: translate(100px, 20px) scale(1);
-  }
-}
-
-@keyframes orbDrift4 {
-  0% {
-    transform: translate(0px, 0px) scale(1);
-  }
-  50% {
-    transform: translate(-70px, -60px) scale(1.1);
-  }
-  100% {
-    transform: translate(40px, -90px) scale(0.92);
-  }
-}
-
-@keyframes orbPulse {
-  0% {
-    transform: translate(-50%, -50%) scale(0.9);
-    opacity: 0.3;
-  }
-  50% {
-    transform: translate(-50%, -50%) scale(1.15);
-    opacity: 0.55;
-  }
-  100% {
-    transform: translate(-50%, -50%) scale(0.9);
-    opacity: 0.3;
-  }
-}
-
-/* Modal code tags */
-.modal-code-tag {
-  display: inline-flex;
-  align-items: center;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 0.75rem;
-  padding: 0.3rem 0.65rem;
-  border-radius: 0.5rem;
-  background-color: rgba(201, 28, 122, 0.15);
-  border: 1px solid rgba(255, 202, 6, 0.3);
-  color: #FFCA06;
-  box-shadow: 0 0 10px rgba(255, 202, 6, 0.12);
-}
-
-/* Accessibility Focus Outline */
-a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
-  outline: 2px solid #FFCA06;
-  outline-offset: 3px;
-  box-shadow: 0 0 20px rgba(201, 28, 122, 0.7);
-}
-
-/* --------------------------------------------------------------------------
-   8. Additional Design Enhancements
-   -------------------------------------------------------------------------- */
-
-/* Purple Card Variant */
-.glass-card-purple {
-  border-color: rgba(104, 9, 126, 0.4);
-  box-shadow: 0 10px 30px -10px rgba(26, 11, 46, 0.7), 0 0 20px -5px rgba(104, 9, 126, 0.25);
-}
-.glass-card-purple:hover {
-  border-color: #9D12B8;
-  box-shadow: 
-    0 25px 50px -12px rgba(26, 11, 46, 0.9),
-    0 0 35px 2px rgba(104, 9, 126, 0.55),
-    0 0 60px 0 rgba(255, 202, 6, 0.3);
-}
-
-/* Section divider styles */
-.section-divider {
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(201, 28, 122, 0.4), rgba(255, 202, 6, 0.4), transparent);
-  margin: 0 auto;
-  max-width: 600px;
-}
-
-/* Skill bar animation */
-.skill-bar-fill {
-  transition: width 1.5s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-/* Scroll reveal animation classes */
+.card-reveal,
 .reveal-up {
   opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
-}
-.reveal-up.visible {
-  opacity: 1;
-  transform: translateY(0);
+  transform: translateY(24px) scale(0.95);
+  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), 
+              transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
 }
 
-/* Floating animation for profile card micro-badges */
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-8px); }
-}
-.float-animate {
-  animation: float 3s ease-in-out infinite;
-}
-.float-animate-delayed {
-  animation: float 3s ease-in-out infinite 1.5s;
+.card-reveal.is-revealed,
+.reveal-up.visible,
+.reveal-up.is-revealed {
+  opacity: 1 !important;
+  transform: translateY(0) scale(1) !important;
 }
 
-/* Timeline connector for org experience */
-.timeline-connector {
-  position: absolute;
-  left: 2rem;
-  top: 100%;
-  width: 2px;
-  height: 2rem;
-  background: linear-gradient(to bottom, rgba(201, 28, 122, 0.5), transparent);
+/* --------------------------------------------------------------------------
+   8. Pillar 01 Icon & Architecture Focus Cards
+   -------------------------------------------------------------------------- */
+.pillar-icon-box {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 1rem;
+  background-color: var(--accent-berry-light);
+  border: 1px solid var(--accent-berry-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-berry);
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
 }
 
-/* Gradient text for section numbers */
-.section-number {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 7rem;
-  font-weight: 900;
-  line-height: 1;
-  background: linear-gradient(135deg, rgba(201, 28, 122, 0.08), rgba(255, 202, 6, 0.06));
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  position: absolute;
-  top: -1.5rem;
-  right: 1rem;
-  pointer-events: none;
-  user-select: none;
+.glass-card:hover .pillar-icon-box {
+  transform: scale(1.08);
 }
 
-/* Toast notification */
-#toast {
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
-}
-
-/* Modal styles */
-#project-modal {
-  transition: opacity 0.3s ease;
-}
-
-/* Back to top button */
-#back-to-top {
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-}
-#back-to-top:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 0 25px rgba(255, 202, 6, 0.6), 0 0 50px rgba(201, 28, 122, 0.4);
-}
-
-/* Improved section headers */
-.section-label {
-  position: relative;
-  display: inline-block;
-}
-.section-label::after {
-  content: '';
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(90deg, #C91C7A, #FFCA06);
+/* --------------------------------------------------------------------------
+   9. Skills Progress Track
+   -------------------------------------------------------------------------- */
+.skill-track {
+  background-color: var(--bg-surface);
   border-radius: 9999px;
-}
-
-/* Enhanced hero stat cards */
-.stat-card-shine {
-  position: relative;
   overflow: hidden;
-}
-.stat-card-shine::after {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.05) 50%, transparent 70%);
-  transform: translateX(-100%) rotate(45deg);
-  transition: transform 0.6s ease;
-}
-.stat-card-shine:hover::after {
-  transform: translateX(100%) rotate(45deg);
+  height: 0.5rem;
+  position: relative;
 }
 
-/* Form validation and shake animation */
+.skill-bar-fill {
+  background-color: var(--accent-berry);
+  height: 100%;
+  border-radius: 9999px;
+  transition: width 1.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* --------------------------------------------------------------------------
+  10. Project Filters & Tech Tags (Yogurt Tint Swatch Integration)
+   -------------------------------------------------------------------------- */
+.project-filter-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 1px solid var(--border-subtle);
+  background-color: var(--bg-card);
+  color: var(--text-secondary);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.project-filter-btn:hover {
+  color: var(--text-main);
+  border-color: var(--accent-berry);
+}
+
+.project-filter-btn.active {
+  background-color: var(--accent-berry);
+  color: #FFFFFF !important;
+  border-color: var(--accent-berry);
+  box-shadow: 0 2px 8px -1px rgba(92, 107, 138, 0.35);
+}
+
+.tech-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.25rem 0.65rem;
+  border-radius: 0.5rem;
+  background-color: var(--bg-surface);
+  color: var(--text-main);
+  border: 1px solid var(--border-subtle);
+}
+
+[data-theme="dark"] .tech-tag {
+  background-color: var(--bg-card-subtle);
+  border-color: var(--border-card);
+  color: var(--text-main);
+}
+
+/* --------------------------------------------------------------------------
+  11. Forms & Anti-Spam UX
+   -------------------------------------------------------------------------- */
+.form-input {
+  width: 100%;
+  background-color: var(--bg-input);
+  border: 1px solid var(--border-input);
+  border-radius: 0.875rem;
+  padding: 0.85rem 1rem;
+  color: var(--text-main);
+  font-size: 0.875rem;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease;
+}
+
+.form-input:focus {
+  border-color: var(--accent-berry);
+  box-shadow: 0 0 0 3px var(--accent-berry-light);
+}
+
+.form-input::placeholder {
+  color: var(--text-muted);
+}
+
+.form-label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-main);
+  margin-bottom: 0.4rem;
+}
+
+.input-invalid {
+  border-color: #EF4444 !important;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.15) !important;
+}
+
+.input-valid {
+  border-color: #10B981 !important;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.15) !important;
+}
+
 @keyframes formShake {
   0%, 100% { transform: translateX(0); }
-  20%, 60% { transform: translateX(-7px); }
-  40%, 80% { transform: translateX(7px); }
+  20%, 60% { transform: translateX(-6px); }
+  40%, 80% { transform: translateX(6px); }
 }
+
 .form-shake {
   animation: formShake 0.4s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
 }
 
-.input-valid {
-  border-color: rgba(52, 211, 153, 0.6) !important;
-  box-shadow: 0 0 12px rgba(52, 211, 153, 0.25) !important;
+/* --------------------------------------------------------------------------
+  12. Footer
+   -------------------------------------------------------------------------- */
+#site-footer {
+  background-color: var(--bg-card);
+  border-top: 1px solid var(--border-subtle);
+  color: var(--text-main);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
-.input-invalid {
-  border-color: rgba(244, 63, 94, 0.7) !important;
-  box-shadow: 0 0 15px rgba(244, 63, 94, 0.35) !important;
+/* --------------------------------------------------------------------------
+  13. Modal, Toast & Scrollbar
+   -------------------------------------------------------------------------- */
+#project-modal {
+  background-color: rgba(26, 32, 44, 0.7);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+
+#modal-box {
+  background-color: var(--bg-modal);
+  border: 1px solid var(--border-card);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  color: var(--text-main);
+}
+
+#toast .glass-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--accent-berry);
+  box-shadow: var(--card-shadow-hover);
+  color: var(--text-main);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-page);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 9999px;
+  border: 2px solid var(--bg-page);
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb {
+  background: #4B5563;
+  border-color: #1A202C;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-berry);
 }
